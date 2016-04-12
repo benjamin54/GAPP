@@ -32,7 +32,8 @@ public class ConnexionController extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 //		Diriger vers la jsp
-		this.getServletContext().getRequestDispatcher( "/view/connexion.jsp" ).forward( request, response );
+		this.getServletContext().getRequestDispatcher( "/view/login.jsp" ).forward( request, response );
+//		this.getServletContext().getRequestDispatcher( "/view/main.jsp" ).forward( request, response );
 	}
 
 	/**
