@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Connexion")
 public class ConnexionController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	public static final String LOGIN = "/view/login.jsp";
+	public static final String MAIN = "/view/main.jsp";
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -32,7 +34,7 @@ public class ConnexionController extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 //		Diriger vers la jsp
-		this.getServletContext().getRequestDispatcher( "/view/login.jsp" ).forward( request, response );
+		this.getServletContext().getRequestDispatcher(LOGIN).forward( request, response );
 //		this.getServletContext().getRequestDispatcher( "/view/main.jsp" ).forward( request, response );
 	}
 
@@ -41,7 +43,8 @@ public class ConnexionController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+//		doGet(request, response);
+		this.getServletContext().getRequestDispatcher(LOGIN).forward( request, response );
 	}
 
 }

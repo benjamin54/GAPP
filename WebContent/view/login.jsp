@@ -10,10 +10,10 @@
 <body>
 	   <div class="login-page">
   <div class="form">
-    <form class="login-form" method="post" action="main">
-      <input type="text" placeholder="login"/>
-      <input type="password" placeholder="mot de passe"/>
-      <button>se connecter</button>
+    <form class="login-form" method="post" action="WebContent/view/main.jsp">
+      <input type="text" id="login" name="login" value="" size="20" maxlength="20"placeholder="login"/>
+      <input type="password" id="motdepasse" name="motdepasse" value="" size="20" maxlength="20" placeholder="mot de passe"/>
+      <input type="submit" value="Se connecter"/>
     </form>
   </div>
 </div>
