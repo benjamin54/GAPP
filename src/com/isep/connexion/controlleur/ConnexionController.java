@@ -1,4 +1,4 @@
-package com.isep.connexion;
+package com.isep.connexion.controlleur;
 
 import java.io.IOException;
 

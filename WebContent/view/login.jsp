@@ -10,7 +10,7 @@
 <body>
 	   <div class="login-page">
   <div class="form">
-    <form class="login-form">
+    <form class="login-form" method="post" action="main">
       <input type="text" placeholder="login"/>
       <input type="password" placeholder="mot de passe"/>
       <button>se connecter</button>

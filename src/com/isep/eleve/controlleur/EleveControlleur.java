@@ -1,4 +1,4 @@
-package com.isep.eleve.controler;
+package com.isep.eleve.controlleur;
 
 import java.io.IOException;
 
@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class EleveControler
  */
 @WebServlet("/EleveControler")
-public class EleveControler extends HttpServlet {
+public class EleveControlleur extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public EleveControler() {
+	public EleveControlleur() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
