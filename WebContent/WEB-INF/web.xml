@@ -12,7 +12,7 @@
 
 <servlet-mapping>
 	<servlet-name>ConnexionForm</servlet-name>
-	<url-pattern>/connexion</url-pattern>
+	<url-pattern>/view/profilEtudiant.jsp</url-pattern>
 </servlet-mapping>
 
 </web-app>
