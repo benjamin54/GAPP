@@ -18,15 +18,18 @@
       <h1 class="text-center ">Connexion</h1>
       </div>
      <div class="modal-body">
-       <form class="col-md-12 center-block">
+       <form class="col-md-12 center-block" action="view/profilEtudiant.html">
         <div class="form-group">
-         <input type="text" class="form-control input-lg" placeholder="username"required autofocus/>
+         <input type="text" name="username" class="form-control input-lg" placeholder="username" size="20" maxlength="20" required autofocus/>
+         <span class="erreur">${form.erreurs['username']}</span>
         </div>
         <div class="form-group">
-             <input type="password" class="form-control input-lg" placeholder="password" required/>
+             <input type="password" name="password" class="form-control input-lg" placeholder="password" size="20" maxlength="20" required/>
+             <span class="erreur">${form.erreurs['password']}</span>
          </div>
        <div class="form-group">
        <input type="submit" class="btn btn-block btn-lg btn-success" value="login">
+       
        <span class="pull-right"><a href="#">Register</a></span>
        <span><a href="#">Mot de passe oublié</a></span>
           </div>

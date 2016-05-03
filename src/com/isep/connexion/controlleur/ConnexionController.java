@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Connexion
@@ -15,8 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Connexion")
 public class ConnexionController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	public static final String LOGIN = "/view/login.jsp";
-	public static final String MAIN = "/view/main.jsp";
+	public static final String LOGIN = "/view/connex.jsp";
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -34,11 +34,11 @@ public class ConnexionController extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 //		Diriger vers la jsp
-		String message = "Transmission de variables : OK !";
-		request.setAttribute( "test", message );
-		this.getServletContext().getRequestDispatcher( LOGIN ).forward( request, response );
-//		this.getServletContext().getRequestDispatcher(LOGIN).forward( request, response );
-//		this.getServletContext().getRequestDispatcher( "/view/main.jsp" ).forward( request, response );
+		this.getServletContext().getRequestDispatcher(LOGIN).forward( request, response );
+		
+		HttpSession session = request.getSession();
+//		si c'est l'étudiant ça va à profil étudiant, diriger la requete au EleveController, 
+//		si tuteur ça va à profil tuteur, diriger au TuteurController
 	}
 
 	/**
