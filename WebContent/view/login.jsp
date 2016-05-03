@@ -5,7 +5,10 @@
   <head>
     <meta charset="UTF-8">
     <title>Gestion APP</title>
-            <link rel="stylesheet" href="lastcss.css">
+
+ <link rel="stylesheet" type="text/css" href="/GAPP/ressources/css/lastcss.css"> 
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
   </head>
 <body>
 	   <div class="login-page">
