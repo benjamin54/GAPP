@@ -42,9 +42,7 @@
     <div class="col-md-9">
        <div class="panel with-nav-tabs panel-primary">
                 <div class="panel-heading clearfix">
-                    <div class="pull-left">
-                        <h1 class="panel-title">Title</h1>
-                    </div>
+                    
                     <div class="pull-right">
                         <ul class="nav nav-tabs">
                             <li class="active"><a href="#tab1primary" data-toggle="tab">COMMUNICATION</a></li>
@@ -2193,13 +2191,15 @@ javaScript:AJAX</li>
          </div>
       </div>
     </div>
-    <nav class="navbar navbar-default navbar-fixed-bottom">
-  <div class="container-fluid">
-  <ul class="nav navbar-nav">
-  <li class="navbar-text pull-right">coucou</li>
-  </ul>
+    </body>
+<!--     <footer> -->
+<!--     <nav class="navbar navbar-default navbar-fixed-bottom"> -->
+<!--   <div class="container-fluid"> -->
+<!--   <ul class="nav navbar-nav"> -->
+<!--   <li class="navbar-text pull-right">coucou</li> -->
+<!--   </ul> -->
  
- </div>
-</nav>
- </body>
+<!--  </div> -->
+<!-- </nav> -->
+<!--  </footer> -->
 </html>

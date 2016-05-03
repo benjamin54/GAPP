@@ -30,7 +30,7 @@
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#">Groupes encadrés</a></li>
         <li><a href="#">Rechercher</a></li>
-        <li><a href="autoeval.html">Grille de compétences</a></li>
+        <li><a href="Evaluations.jsp">Grille de compétences</a></li>
         <li><a href="Informations sur lestudiants">Informations sur les étudiants</a></li>
         <li><a href="#">Noter les abscences</a></li>
         <li><a href="#">Agenda</a></li>

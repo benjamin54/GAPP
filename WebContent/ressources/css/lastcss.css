@@ -202,7 +202,7 @@ a{
  background-size: cover;
 }
 
-/* pour la pag profilTuteur */
+/* pour la page profilTuteur */
 .with-nav-tabs.panel-primary .nav-tabs > li > a,
 .with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
 .with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
@@ -230,7 +230,8 @@ a{
     border-color: #3071a9;
 }
 .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a {
-    color: #fff;   
+    color: #fff;
+    marging-right:10%;   
 }
 .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
 .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
@@ -241,7 +242,8 @@ a{
 .with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
     background-color: #4a9fe9;
 }
-/* pour profiletudiant */
+
+/* pour profiletudiant(la barre menu) */
 
 #wrapper {
     padding-left: 0;
