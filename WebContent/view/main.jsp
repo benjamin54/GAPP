@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Gestion APP</title>
-            <link rel="stylesheet" href="ressources/css/lastcss.css">
+    <link rel="stylesheet" type="text/css" href="/GAPP/ressources/css/lastcss.css">
 </head>
 <body>
 <div class="header">
