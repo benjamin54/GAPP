@@ -35,7 +35,7 @@ public final class ConnexionForm {
         } catch ( Exception e ) {
             setErreur( CHAMP_USER, e.getMessage() );
         }
-        eleve.setUser(username);
+        eleve.setUsername(username);
 
         /* Validation du champ mot de passe. */
         try {
@@ -43,7 +43,7 @@ public final class ConnexionForm {
         } catch ( Exception e ) {
             setErreur( CHAMP_PASS, e.getMessage() );
         }
-        eleve.setMotDePasse(password);
+        eleve.setPassword(password);
 
         /* Initialisation du résultat global de la validation. */
         if ( erreurs.isEmpty() ) {
@@ -52,7 +52,7 @@ public final class ConnexionForm {
             resultat = "Échec de la connexion.";
         }
 
-        return utilisateur;
+        return eleve;
     }
 
     /**

@@ -10,12 +10,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.isep.connexion.model.ConnexionForm;
+import com.isep.eleve.model.Eleve;
+
 /**
  * Servlet implementation class Connexion
  */
 @WebServlet("/Connexion")
 public class ConnexionController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+    public static final String ATT_USER         = "utilisateur";
+    public static final String ATT_FORM         = "form";
+    public static final String ATT_SESSION_USER = "sessionUtilisateur";
 	public static final String LOGIN = "/view/connex.jsp";
        
     /**
@@ -35,8 +41,7 @@ public class ConnexionController extends HttpServlet {
 		
 //		Diriger vers la jsp
 		this.getServletContext().getRequestDispatcher(LOGIN).forward( request, response );
-		
-		HttpSession session = request.getSession();
+
 //		si c'est l'étudiant ça va à profil étudiant, diriger la requete au EleveController, 
 //		si tuteur ça va à profil tuteur, diriger au TuteurController
 	}
@@ -47,7 +52,30 @@ public class ConnexionController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		doGet(request, response);
-		this.getServletContext().getRequestDispatcher(LOGIN).forward( request, response );
+		 /* Préparation de l'objet formulaire */
+        ConnexionForm form = new ConnexionForm();
+
+        /* Traitement de la requête et récupération du bean en résultant */
+        Eleve eleve = form.connecterUtilisateur( request );
+
+        /* Récupération de la session depuis la requête */
+        HttpSession session = request.getSession();
+
+        /**
+         * Si aucune erreur de validation n'a eu lieu, alors ajout du bean
+         * Utilisateur à la session, sinon suppression du bean de la session.
+         */
+        if ( form.getErreurs().isEmpty() ) {
+            session.setAttribute( ATT_SESSION_USER, eleve );
+        } else {
+            session.setAttribute( ATT_SESSION_USER, null );
+        }
+
+        /* Stockage du formulaire et du bean dans l'objet request */
+        request.setAttribute( ATT_FORM, form );
+        request.setAttribute( ATT_USER, eleve );
+
+        this.getServletContext().getRequestDispatcher(LOGIN ).forward( request, response );
 	}
 
 }

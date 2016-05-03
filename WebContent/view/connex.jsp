@@ -18,9 +18,9 @@
       <h1 class="text-center ">Connexion</h1>
       </div>
      <div class="modal-body">
-       <form class="col-md-12 center-block" action="view/profilEtudiant.html">
+       <form class="col-md-12 center-block" action="connex.jsp">
         <div class="form-group">
-         <input type="text" name="username" class="form-control input-lg" placeholder="username" size="20" maxlength="20" required autofocus/>
+         <input type="email" name="username" class="form-control input-lg" placeholder="username" size="20" maxlength="20" required autofocus/>
          <span class="erreur">${form.erreurs['username']}</span>
         </div>
         <div class="form-group">
