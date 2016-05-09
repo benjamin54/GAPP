@@ -58,8 +58,8 @@ public final class ConnexionForm {
     /**
      * Valide l'adresse email saisie.
      */
-    private void validationUser( String email ) throws Exception {
-        if ( email != null && !email.matches( "([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)" ) ) {
+    private void validationUser( String username ) throws Exception {
+        if ( username != null && !username.matches( "([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)" ) ) {
             throw new Exception( "Merci de saisir une adresse mail valide." );
         }
     }
@@ -67,9 +67,9 @@ public final class ConnexionForm {
     /**
      * Valide le mot de passe saisi.
      */
-    private void validationPassword( String motDePasse ) throws Exception {
-        if ( motDePasse != null ) {
-            if ( motDePasse.length() < 3 ) {
+    private void validationPassword( String password ) throws Exception {
+        if ( password != null ) {
+            if ( password.length() < 3 ) {
                 throw new Exception( "Le mot de passe doit contenir au moins 3 caractères." );
             }
         } else {
