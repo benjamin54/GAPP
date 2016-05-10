@@ -1,3 +1,5 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC ">
@@ -50,7 +52,7 @@
        <section class="col-md-3">
        <h3>TUTEUR</h3>
     <form>
-    nom et prénom du tuteur:<br>
+    nom et prï¿½nom du tuteur:<br>
     e-mail:<br>
     remarques du tuteur:
     

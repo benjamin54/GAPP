@@ -19,10 +19,12 @@ import com.isep.eleve.model.Eleve;
 @WebServlet("/Connexion")
 public class ConnexionController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    public static final String ATT_USER         = "utilisateur";
+    public static final String ATT_USER         = "eleve";
     public static final String ATT_FORM         = "form";
     public static final String ATT_SESSION_USER = "sessionUtilisateur";
 	public static final String LOGIN = "/view/connex.jsp";
+	public static final String ETUDIANT = "/view/profilEtudiant.jsp";
+	public static final String TUTEUR = "/view/ProfilTuteur.jsp";
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -75,7 +77,7 @@ public class ConnexionController extends HttpServlet {
         request.setAttribute( ATT_FORM, form );
         request.setAttribute( ATT_USER, eleve );
 
-        this.getServletContext().getRequestDispatcher(LOGIN ).forward( request, response );
+        this.getServletContext().getRequestDispatcher(LOGIN).forward( request, response );
 	}
 
 }
