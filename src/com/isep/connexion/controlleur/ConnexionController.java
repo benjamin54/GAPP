@@ -53,7 +53,7 @@ public class ConnexionController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		doGet(request, response);
+
 		 /* Préparation de l'objet formulaire */
         ConnexionForm form = new ConnexionForm();
 
@@ -77,7 +77,7 @@ public class ConnexionController extends HttpServlet {
         request.setAttribute( ATT_FORM, form );
         request.setAttribute( ATT_USER, eleve );
 
-        this.getServletContext().getRequestDispatcher(LOGIN).forward( request, response );
+        this.getServletContext().getRequestDispatcher(ETUDIANT).forward( request, response );
 	}
 
 }
