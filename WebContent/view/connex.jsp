@@ -18,7 +18,7 @@
       <h1 class="text-center ">Connexion</h1>
       </div>
      <div class="modal-body">
-       <form class="col-md-12 center-block">
+       <form class="col-md-12 center-block" action="view/profilEtudiant.jsp">
         <div class="form-group">
          <input type="text" class="form-control input-lg" placeholder="username"required autofocus/>
         </div>
