@@ -1,5 +1,5 @@
-<%@ page pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%> 
 <!DOCTYPE html> 
 <html>
 <head>
@@ -18,20 +18,17 @@
       <h1 class="text-center ">Connexion</h1>
       </div>
      <div class="modal-body">
-       <form class="col-md-12 center-block" method="post" action="view/profilEtudiant.jsp">
+       <form class="col-md-12 center-block">
         <div class="form-group">
-         <input type="email" name="username" value="<c:out value="${eleve.username}"/>" class="form-control input-lg" placeholder="username" size="20" maxlength="20" required autofocus/>
-         <span class="erreur">${form.erreurs['username']}</span>
+         <input type="text" class="form-control input-lg" placeholder="username"required autofocus/>
         </div>
         <div class="form-group">
-             <input type="password" name="password" class="form-control input-lg" placeholder="password" size="20" maxlength="20" required/>
-             <span class="erreur">${form.erreurs['password']}</span>
+             <input type="password" class="form-control input-lg" placeholder="password" required/>
          </div>
        <div class="form-group">
        <input type="submit" class="btn btn-block btn-lg btn-success" value="login">
-       
        <span class="pull-right"><a href="#">Register</a></span>
-       <span><a href="#">Mot de passe oubliÃ©</a></span>
+       <span><a href="#">Mot de passe oublié</a></span>
           </div>
       </form>
      <div class="modal-footer">
