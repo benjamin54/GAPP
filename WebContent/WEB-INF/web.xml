@@ -5,7 +5,7 @@
   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
   version="3.0">
 
-<!-- <servlet>
+<servlet>
 	<servlet-name>ConnexionController</servlet-name>
 	<servlet-class>com.isep.connexion.ConnexionController</servlet-class>
 </servlet>
@@ -13,6 +13,6 @@
 <servlet-mapping>
 	<servlet-name>Connexion</servlet-name>
 	<url-pattern>/view/profilEtudiant.jsp</url-pattern>
-</servlet-mapping> -->
+</servlet-mapping>
 
 </web-app>
