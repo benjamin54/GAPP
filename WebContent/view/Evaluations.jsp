@@ -2190,6 +2190,13 @@ javaScript:AJAX</li>
             </div>
          </div>
       </div>
+      <div class="row">
+       <div class="class col-sm-offset-6">
+       <p>Note finale Provisoire:</p>
+       
+       </div>
+      
+      </div>
     </div>
     </body>
 <!--     <footer> -->

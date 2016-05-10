@@ -388,6 +388,10 @@ h5{
 h1{
 	color:#ffffff;
 }
+nav-pills nav-stacked > li{
+	
+	padding: 10%
+}
 /* POUR LE CALENDRIER */
 
 div.zabuto_calendar {

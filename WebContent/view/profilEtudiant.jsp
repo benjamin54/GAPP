@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC ">
 <html>
   <head>
     <meta charset="UTF-8">
@@ -14,6 +16,9 @@
     
   </head>
   <body> 
+ 
+  <header class="row">
+  <div class="col-md-12">
   <nav class="navbar navbar-default navbar-fixed-top">
 <div class="container">
  <ul class="nav navbar-nav">
@@ -24,8 +29,10 @@
   </form>
  </div>
 </nav>
-<div class="container">
- <h3>Fixed Navbar</h3>
+</div>
+</header>
+
+ <div class="container" style="margin-top:60px;">
 <div class="row">
  <div class="col-md-3">
       <ul class="nav nav-pills nav-stacked">
@@ -35,13 +42,28 @@
         <li><a href="#">MON GROUPE</a></li>
       </ul>
     </div>
-    <div class="col-md-9">
+    <section class="col-md-3">
+        <h3>COURS</h3>
+      <div id="my-calendar"></div>
+                </section>
+       
+       <section class="col-md-3">
+       <h3>TUTEUR</h3>
+    <form>
+    nom et prénom du tuteur:<br>
+    e-mail:<br>
+    remarques du tuteur:
     
-    <div class="col-md-3">
-     <div id="my-calendar"></div>
-    </div>
-                  </div>
-             </div>
+    </form>
+     </section>
+    <section>
+    <h3> ABSCENCES</h3>
+    
+   
+    <p> Dates des abscences:</p>
+    
+    </section>
+          </div>
 </div>
 </body>
 
