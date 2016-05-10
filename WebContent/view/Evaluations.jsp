@@ -1,18 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="UTF-8"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+
 <html>
 <head>
-
+  <title>Gestion app/profil tuteur</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Grille de compétences</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="coucou.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet"> 
+<script src="ressources/js/jquery.js"></script> 
 </head>
 
 <body>
@@ -42,8 +38,10 @@
     <div class="col-md-9">
        <div class="panel with-nav-tabs panel-primary">
                 <div class="panel-heading clearfix">
-                    
-                    <div class="pull-right">
+                    <div class="pull-left">
+                        <h1 class="panel-title">Title</h1>
+                    </div>
+                     <div class="pull-right">
                         <ul class="nav nav-tabs">
                             <li class="active"><a href="#tab1primary" data-toggle="tab">COMMUNICATION</a></li>
                             <li><a href="#tab2primary" data-toggle="tab">TRAVAIL EN EQUIPE</a></li>
@@ -2190,23 +2188,14 @@ javaScript:AJAX</li>
             </div>
          </div>
       </div>
-      <div class="row">
-       <div class="class col-sm-offset-6">
-       <p>Note finale Provisoire:</p>
-       
-       </div>
-      
-      </div>
     </div>
-    </body>
-<!--     <footer> -->
-<!--     <nav class="navbar navbar-default navbar-fixed-bottom"> -->
-<!--   <div class="container-fluid"> -->
-<!--   <ul class="nav navbar-nav"> -->
-<!--   <li class="navbar-text pull-right">coucou</li> -->
-<!--   </ul> -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+  <ul class="nav navbar-nav">
+  <li class="navbar-text pull-right">coucou</li>
+  </ul>
  
-<!--  </div> -->
-<!-- </nav> -->
-<!--  </footer> -->
+ </div>
+</nav>
+ </body>
 </html>
