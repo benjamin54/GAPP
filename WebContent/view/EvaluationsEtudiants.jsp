@@ -1,12 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-
+<!DOCTYPE html PUBLIC>
 <html>
 <head>
-
-  <title>Gestion app/profil tuteur</title>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Gestion app/EvaluationsEtudiants</title>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -15,7 +13,7 @@
 <script type="text/javascript" src="coucou.js"></script> 
  
 </head>
-
+</head>
 <body>
 <nav class="navbar navbar-dark bg-success navbar-fixed-top" style=" padding-top:20px;">
 <div class="container">
@@ -31,13 +29,12 @@
 
  <div class="row">
     <div class="col-md-3">
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#">Groupes encadrés</a></li>
-        <li><a href="#">Rechercher</a></li>
-        <li class="active"><a href="Evaluations.jsp">Grille de compétences</a></li>
-        <li><a href="Informations sur lestudiants.jsp">Informations sur les étudiants</a></li>
-        <li><a href="#">Noter les abscences</a></li>
-        <li><a href="#">Agenda</a></li>
+     <ul class="nav nav-pills nav-stacked">
+        <li><a href="AccueilEtudiant.jsp">ACCUEIL</a></li>
+        <li><a href="profilEtudiant.jsp">MON PROFIL</a></li>
+        <li><a href="RechercheProf.jsp">RECHERCHER</a></li>
+        <li class="active"><a href="EvaluationsEtudiants.jsp">GRILLE DE COMPETENCES</a></li>
+        <li><a href="Groupe.jsp">MON GROUPE</a></li>
       </ul>
     </div>
     <div class="col-md-9">
@@ -2205,4 +2202,6 @@ javaScript:AJAX</li>
 <!--  </div> -->
 <!-- </div> -->
  </body>
+</html>
+</body>
 </html>

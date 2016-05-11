@@ -5,7 +5,7 @@
 <!DOCTYPE html PUBLIC ">
 <html>
   <head>
-    <meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Gestion APP</title>
       
      <meta charset="utf-8">
@@ -20,8 +20,7 @@
   <body> 
  
   <header class="row">
-  <div class="col-md-12">
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-dark bg-success navbar-fixed-top" style=" padding-top:20px;">
 <div class="container">
  <ul class="nav navbar-nav">
   <li class="navbar-text">NOM et Prenom</li>
@@ -31,17 +30,17 @@
   </form>
  </div>
 </nav>
-</div>
 </header>
 
- <div class="container" style="margin-top:60px;">
+ <div class="container" style="margin-top:110px;">
 <div class="row">
  <div class="col-md-3">
       <ul class="nav nav-pills nav-stacked">
-        <li><a href="#">MON PROFIL</a></li>
-        <li><a href="#">RECHERCHER</a></li>
-        <li class="active"><a href="Evaluations.jsp">GRILLE DE COMPETENCES</a></li>
-        <li><a href="#">MON GROUPE</a></li>
+        <li><a href="AccueilEtudiant.jsp">Accueil</a></li>
+        <li class="active"><a href="profilEtudiant.jsp">MON PROFIL</a></li>
+        <li><a href="RechercheProf.jsp">RECHERCHER</a></li>
+        <li><a href="EvaluationsEtudiants.jsp">GRILLE DE COMPETENCES</a></li>
+        <li><a href="Groupe.jsp">MON GROUPE</a></li>
       </ul>
     </div>
     <section class="col-md-3">

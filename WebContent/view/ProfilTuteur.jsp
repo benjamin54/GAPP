@@ -20,9 +20,8 @@
   </form>
  </div>
 </nav>
-
-<div class="container">
-     <h3>Fixed Navbar</h3>
+</header> 
+<div class="container" style="margin-top:60px;">
 <div class="row">    
     <div class="col-md-3">
       <ul class="nav nav-pills nav-stacked bordered">
@@ -34,12 +33,13 @@
         <li><a href="Evaluation.jsp">Grille de compétences</a></li>
         <li><a href="info.jsp"> Notes des étudiants </a></li>
         <li><a href="Abscences.jsp">Noter les abscences</a></li>
-      </ul>
+         </ul>
       </div>
+        
+<section class="col-md-9">
 
-</header> 
- <p> Bienvenue sur l'espace tuteur dans le cadre de l'apprentissage par projet </p>
-
-      </div>
+<p> Bienvenue sur l'espace tuteur dans le cadre de l'apprentissage par projet </p>
+                  </section>
+          </div>
       </div>
 </html>
