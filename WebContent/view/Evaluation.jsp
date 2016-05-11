@@ -1,41 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
+
   <title>Gestion app/profil tuteur</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet"> 
 <script src="ressources/js/jquery.js"></script> 
-</head>
 <body>
-
-<nav class="navbar navbar-default navbar-fixed-top">
-<div class="container">
- <ul class="nav navbar-nav">
-  <li class="navbar-text">NOM et Prenom</li>
-  </ul>
-   <form class="form-inline pull-xs-right">
-   <button type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
-  </form>
- </div>
-</nav>
-<div class="container">
-     <h3>Fixed Navbar</h3>
-<div class="row">    
-    <div class="col-md-3">
-      <ul class="nav nav-pills nav-stacked">
-      
-      	<li><a href="ProfilTuteur.jsp">Accueil</a></li>
-      	<li><a href="Agenda.jsp">Agenda</a></li>
-        <li><a href="Groupesencadres.jsp">Groupes encadrés</a></li>
-        <li><a href="RechercheEleve.jsp">Rechercher</a></li>
-        <li><a href="autoeval.html">Grille de compétences</a></li>
-        <li><a href="Info.jsp">Informations sur les étudiants</a></li>
-        <li><a href="Abscences.jsp">Noter les abscences</a></li>
-      </ul>
-      </div>
+<div class="row">
+  <div class="col-sm-4 col-md-4 col-lg-4">
+<%@include file="Header.jsp" %> </div>
     <div class="col-md-9">
   <ul class="nav nav-tabs nav-justified">
 
