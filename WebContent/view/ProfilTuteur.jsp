@@ -1,16 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-
 <html>
-
+<head>
   <title>Gestion app/profil tuteur</title>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet"> 
-<script src="ressources/js/jquery.js"></script> 
-<header>
-<nav class="navbar navbar-default navbar-fixed-top">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="coucou.js"></script>
+</head>
+<body>
+<header class="row">
+  <nav class="navbar navbar-dark bg-success navbar-fixed-top" style=" padding-top:20px;">
 <div class="container">
  <ul class="nav navbar-nav">
   <li class="navbar-text">NOM et Prenom</li>
@@ -20,8 +23,9 @@
   </form>
  </div>
 </nav>
-</header> 
-<div class="container" style="margin-top:60px;">
+</header>
+
+<div class="container" style="margin-top:110px;">
 <div class="row">    
     <div class="col-md-3">
       <ul class="nav nav-pills nav-stacked bordered">
@@ -42,4 +46,5 @@
                   </section>
           </div>
       </div>
+      </body>
 </html>
