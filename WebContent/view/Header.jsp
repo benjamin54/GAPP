@@ -1,41 +1,58 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
+<head>
 
-  <title>Gestion app/profil tuteur</title>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet"> 
-<script src="ressources/js/jquery.js"></script> 
-<header>
-<nav class="navbar navbar-default navbar-fixed-top">
-<div class="container">
- <ul class="nav navbar-nav">
-  <li class="navbar-text">NOM et Prenom</li>
-  </ul>
-   <form class="form-inline pull-xs-right">
-   <button type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
-  </form>
- </div>
-</nav>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<div class="container">
-     <h3>Fixed Navbar</h3>
-<div class="row">    
-    <div class="col-md-3">
-      <ul class="nav nav-pills nav-stacked bordered">
-      
-      	<li><a href="ProfilTuteur.jsp">Accueil</a></li>
+    <title>Bienvenue sur le profil du tuteur</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/GAPP/ressources/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/GAPP/ressources/css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" >
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Nom prenom sign out
+                    </a>
+                </li>
+        <li><a href="ProfilTuteur.jsp">Accueil</a></li>
       	<li><a href="Agenda.jsp">Agenda</a></li>
         <li><a href="Groupesencadres.jsp">Groupes encadrés</a></li>
         <li><a href="RechercheEleve.jsp">Rechercher</a></li>
         <li><a href="Evaluation.jsp">Grille de compétences</a></li>
         <li><a href="info.jsp"> Notes des étudiants </a></li>
         <li><a href="Abscences.jsp">Noter les abscences</a></li>
-      </ul>
-      </div>
-      </div>
-</header>
-      
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+
+
+</body>
+
+</html>
