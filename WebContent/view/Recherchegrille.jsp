@@ -4,7 +4,7 @@
 
 <html>
 
-  <title>Gestion app/profil tuteur</title>
+  <title>Grille de compétence</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet"> 
@@ -35,19 +35,24 @@
     </div>
     <div class="collapse navbar-collapse navbar-ex2-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="RechercheEleve.jsp"> Recherche d'élève</a></li>
+        <li><a href="Recherchegrille.jsp"> Recherche d'élève</a></li>
        
       </ul>
       <form class="navbar-form navbar-left" >
         <div class="form-group">
           <input type="text" class="form-control" >
         </div>
-        <button type="submit" class="btn btn-default"><i class="icon icon-search">envoyer</i></button>
+       <a href="grille.jsp" class="btn btn-info" role="button">envoyer</a>
       </form>
 
     </div>
   </div>
 </nav>
+<div>
+<div class="form-group"> <!-- Submit button -->
+        <a class="btn btn-primary " name="submit" type="submit" href="ModifierGrille.jsp">Modifier la grille</a>
+      </div>
+      </div>
   </div>  
 </div>
 </div>

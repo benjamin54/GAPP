@@ -4,7 +4,7 @@
 
 <html>
 
-  <title>Gestion app/profil tuteur</title>
+  <title>Ajouter une famille</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet"> 
@@ -20,27 +20,27 @@
 <div class="container">
      <h3></h3>
 <div class="row">
-        
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Prénom</th>
-        <th>Nom</th>
-        <th>Assiduite</th>
-        <th>Groupe</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>111101</td>
-        <td> A </td>
-      </tr>
-</table>
-</div> 
-</div>
+    <div class="container">
+  <h2>Ajouter une compétence</h2>
+    <div class="form-group">
+    <label for="exampleInputName2">Nom de la famille</label>
+    <input type="text" class="form-control" id="Nomevent" >
   </div>
+  <div class="form-group">
+    <label for="exampleInputName2">Nom de la compétence</label>
+    <input type="text" class="form-control" id="Nomevent" >
+  </div>
+
+    <div class="form-group">
+    <label for="exampleInputName2">Description</label>
+    <input type="text" class="form-control" id="Nomevent" >
+  </div>
+  <a href="grille.jsp" class="btn btn-info" role="button">envoyer</a>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>

@@ -27,10 +27,11 @@
     <div class="col-md-3">
       <ul class="nav nav-pills nav-stacked bordered">
       
-      	<li><a href="ProfilTuteur.jsp">Accueil</a></li>
-      	<li><a href="Agenda.jsp">Agenda</a></li>
-        <li><a href="Groupesencadres.jsp">Groupes encadrés</a></li>
-        <li><a href="Recherchegrille.jsp">Grille de compétences</a></li>
+      	<li><a href="AdministrationEleve.jsp">Administration élève</a></li>
+      	<li><a href="AdministrationTuteur.jsp">Administration tuteur</a></li>
+      	
+       
+  
       </ul>
       </div>
       </div>
