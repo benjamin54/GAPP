@@ -26,8 +26,7 @@
     <h1> Liste des élèves en A1</h1>
       <tr>
 
-        <th>Nom du tuteur</th>
-        <th>Nom</th>
+        <th>Nom de l'élève</th>
         <th>Prénom</th>
         <th>Numéro de groupe</th>
 
@@ -35,10 +34,11 @@
     </thead>
     <tbody>
       <tr>
-        <td>Monsieur Sellami</td>
+
         <td>John</td>
         <td>loic</td>
         <td> G1A </td>
+ 
       </tr>
 </table>
 </div> 

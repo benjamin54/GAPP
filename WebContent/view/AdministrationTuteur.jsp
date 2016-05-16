@@ -23,10 +23,10 @@
         
   <table class="table table-bordered">
     <thead>
-    <h1> Liste des professeurs</h1>
+    <h1> Liste des professeurs à l'isep</h1>
       <tr>
 
-        <th>Nom du tuteur</th>
+        <th>Nom du professeur</th>
         <th>Nom</th>
         <th>Prénom</th>
         <th>Responsable de groupe</th>
