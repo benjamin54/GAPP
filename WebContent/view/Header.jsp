@@ -1,16 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-<!DOCTYPE html>
-
+<!DOCTYPE html PUBLIC>
 <html>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="coucou.js"></script>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Gestion app/EvaluationsEtudiants</title>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<header>
-<nav class="navbar navbar-default navbar-fixed-top">
+<link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="ressources/js/jquery.js"></script> 
+<script type="text/javascript" src="coucou.js"></script> 
+ 
+<body>
+<nav class="navbar navbar-dark bg-success navbar-fixed-top" style=" padding-top:20px;">
 <div class="container">
  <ul class="nav navbar-nav">
   <li class="navbar-text">NOM et Prenom</li>
@@ -21,19 +24,15 @@
  </div>
 </nav>
 
-<div class="container">
-     <h3> </h3>
-<div class="row">    
-    <div class="col-md-3">
-      <ul class="nav nav-pills nav-stacked bordered">
+ 
+     <ul class="nav nav-pills nav-stacked">
       
       	<li><a href="ProfilTuteur.jsp">Accueil</a></li>
       	<li><a href="Agenda.jsp">Agenda</a></li>
         <li><a href="Groupesencadres.jsp">Groupes encadrés</a></li>
-        <li><a href="Recherchegrille.jsp">Grille de compétences</a></li>
+        <li><a href="ModifierGrille.jsp">Grille de compétences</a></li>
       </ul>
-      </div>
-      </div>
-      </div>
-</header>
+
+
+</head>
 </html>

@@ -16,19 +16,15 @@
   <div class="col-sm-4 col-md-4 col-lg-4">
 <%@include file="Header.jsp" %> </div>
 <div class="col-sm-8 col-md-8 col-lg-8">
-
 <div class="container">
      <h3></h3>
 <div class="row">
-    <div class="container">
   <h2>Modifier la grille de compétence</h2>
   <div class="form-group">
 <div></div><a class="w3-btn" href="AjouterFamille.jsp">Ajouter une famille</a></div>
 <div><a class="w3-btn" href="AjouterCompetence.jsp">Ajouter une compétence</a></div>
   </div>
-  <div class="container">
-     <h3></h3>
-<div class="row">
+
         
   <table class="table table-bordered">
     <thead>

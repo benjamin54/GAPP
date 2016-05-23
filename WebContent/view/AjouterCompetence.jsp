@@ -20,7 +20,6 @@
 <div class="container">
      <h3></h3>
 <div class="row">
-    <div class="container">
   <h2>Ajouter une compétence</h2>
     <div class="form-group">
     <label for="exampleInputName2">Nom de la famille</label>
