@@ -8,7 +8,6 @@
   <title>Gestion app/profil tuteur</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet"> 
 <script src="ressources/js/jquery.js"></script> 
 <body>
 <div class="container">
@@ -24,17 +23,8 @@
     
  <!-- correspond à la partie qui va changer en fonction de chaque page -->
     
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse navbar-ex2-collapse">
+
+    <div>
       <ul class="nav navbar-nav">
         <li><a href="RechercheEleve.jsp"> Recherche d'élève</a></li>
        
@@ -48,11 +38,11 @@
 
     </div>
   </div>
-</nav>
+
   </div>  
 </div>
 </div>
 </div>
-</div>
+
 </body>
 </html>

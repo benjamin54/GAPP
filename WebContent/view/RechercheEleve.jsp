@@ -28,6 +28,7 @@
         <th>Nom</th>
         <th>Assiduite</th>
         <th>Groupe</th>
+        <th>Grille de competence</th>
       </tr>
     </thead>
     <tbody>
@@ -36,11 +37,13 @@
         <td>Doe</td>
         <td>111101</td>
         <td> A </td>
+        <td> voir / modifier </td>
       </tr>
 </table>
 </div> 
 </div>
   </div>
+</div>
 </div>
 </body>
 </html>
