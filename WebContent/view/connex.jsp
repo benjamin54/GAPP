@@ -19,17 +19,18 @@
       <h1 class="text-center ">Connexion</h1>
       </div>
      <div class="modal-body">
-       <form class="col-md-12 center-block" action="connexion">
+       <form class="col-md-12 center-block" method="post" action="connexion">
         <div class="form-group">
          <input type="email" name="username" value="<c:out value="${param.username}"/>" class="form-control input-lg" placeholder="username" required autofocus/>
         </div>
-        <span class="erreur">${erreurs['username']}</span>
+        <span class="erreur">${form.erreurs['username']}</span>
         <div class="form-group">
              <input type="password" name="password" class="form-control input-lg" placeholder="password" required/>
          </div>
-         <span class="erreur">${erreurs['password']}</span>
+         <span class="erreur">${form.erreurs['password']}</span>
        <div class="form-group">
        <input type="submit" class="btn btn-block btn-lg btn-success" value="login">
+       <p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
        <span class="pull-right"><a href="#">Register</a></span>
        <span><a href="#">Mot de passe oublié</a></span>
           </div>

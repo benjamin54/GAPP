@@ -23,8 +23,9 @@ public class ConnexionController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     public static final String ATT_USER = "eleve";
     public static final String ATT_FORM = "form";
+    public static final String ATT_SESSION_USER = "sessionUser";
 	public static final String LOGIN = "/view/connex.jsp";
-	public static final String ETUDIANT = "/WEB-INF/profilEtudiant.jsp";
+	public static final String ETUDIANT = "/view/profilEtudiant.jsp";
 	public static final String TUTEUR = "/view/ProfilTuteur.jsp";
   
     
@@ -50,23 +51,23 @@ public class ConnexionController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 /* Préparation de l'objet formulaire */
-        ConnexionForm form = new ConnexionForm();
 
-        /* Traitement de la requête et récupération du bean en résultant */
+        ConnexionForm form = new ConnexionForm();
         Eleve eleve = form.connecterUser( request );
 
-        /* Récupération de la session depuis la requête */
-//        HttpSession session = request.getSession();
+        HttpSession session = request.getSession();
+        if ( form.getErreurs().isEmpty() ) {
+            session.setAttribute( ATT_SESSION_USER, eleve );
+        } else {
+            session.setAttribute( ATT_SESSION_USER, null );
+        }
         
         request.setAttribute( ATT_FORM, form );
         request.setAttribute( ATT_USER, eleve );
        
         if ( form.getErreurs().isEmpty() ) {
-            /* Si aucune erreur, alors affichage de la page étudiants */
             this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );
         } else {
-            /* Sinon, ré-affichage du formulaire de création avec les erreurs */
             this.getServletContext().getRequestDispatcher( LOGIN ).forward( request, response );
         }
     }
