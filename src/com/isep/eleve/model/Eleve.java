@@ -1,16 +1,9 @@
 package com.isep.eleve.model;
 
 public class Eleve {
-	    private String email;
 	    private String password;
 	    private String username;
 	    
-		public String getEmail() {
-			return email;
-		}
-		public void setEmail(String email) {
-			this.email = email;
-		}
 		public String getPassword() {
 			return password;
 		}

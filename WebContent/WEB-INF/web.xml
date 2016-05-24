@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
-	<session-config> 
-		<session-timeout>1</session-timeout>
-	</session-config>
 
 	<servlet>
-		<servlet-name>Connexion</servlet-name>
-		<servlet-class>com.sdzee.servlets.Connexion</servlet-class>
+		<servlet-name>ConnexionController</servlet-name>
+		<servlet-class>com.isep.connexion.controlleur.ConnexionController</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>Connexion</servlet-name>
+		<servlet-name>ConnexionController</servlet-name>
 		<url-pattern>/connexion</url-pattern>
 	</servlet-mapping>
 </web-app>

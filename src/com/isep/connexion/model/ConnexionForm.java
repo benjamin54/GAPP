@@ -22,7 +22,7 @@ public final class ConnexionForm {
         return erreurs;
     }
 
-    public Eleve connecterUtilisateur( HttpServletRequest request ) {
+    public Eleve connecterUser( HttpServletRequest request ) {
         /* Récupération des champs du formulaire */
         String username = getValeurChamp( request, CHAMP_USER );
         String password = getValeurChamp( request, CHAMP_PASS );
@@ -31,7 +31,7 @@ public final class ConnexionForm {
 
         /* Validation du champ email. */
         try {
-            validationUser(username);
+            validationEmail(username);
         } catch ( Exception e ) {
             setErreur( CHAMP_USER, e.getMessage() );
         }
@@ -39,7 +39,7 @@ public final class ConnexionForm {
 
         /* Validation du champ mot de passe. */
         try {
-            validationPassword(password);
+            validationMotDePasse(password);
         } catch ( Exception e ) {
             setErreur( CHAMP_PASS, e.getMessage() );
         }
@@ -58,16 +58,20 @@ public final class ConnexionForm {
     /**
      * Valide l'adresse email saisie.
      */
-    private void validationUser( String username ) throws Exception {
-        if ( username != null && !username.matches( "([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)" ) ) {
-            throw new Exception( "Merci de saisir une adresse mail valide." );
-        }
+    private void validationEmail( String username ) throws Exception {
+    	 if ( username != null ) {
+    	        if ( !username.matches( "([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)" ) ) {
+    	            throw new Exception( "Merci de saisir une adresse mail valide." );
+    	        }
+    	    } else {
+    	        throw new Exception( "Merci de saisir une adresse mail." );
+    	    }
     }
 
     /**
      * Valide le mot de passe saisi.
      */
-    private void validationPassword( String password ) throws Exception {
+    private void validationMotDePasse( String password ) throws Exception {
         if ( password != null ) {
             if ( password.length() < 3 ) {
                 throw new Exception( "Le mot de passe doit contenir au moins 3 caractères." );

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html> 
 <html>
 <head>
@@ -18,13 +19,15 @@
       <h1 class="text-center ">Connexion</h1>
       </div>
      <div class="modal-body">
-       <form class="col-md-12 center-block" action="view/profilEtudiant.jsp">
+       <form class="col-md-12 center-block" action="connexion">
         <div class="form-group">
-         <input type="text" class="form-control input-lg" placeholder="username"required autofocus/>
+         <input type="email" name="username" value="<c:out value="${param.username}"/>" class="form-control input-lg" placeholder="username" required autofocus/>
         </div>
+        <span class="erreur">${erreurs['username']}</span>
         <div class="form-group">
-             <input type="password" class="form-control input-lg" placeholder="password" required/>
+             <input type="password" name="password" class="form-control input-lg" placeholder="password" required/>
          </div>
+         <span class="erreur">${erreurs['password']}</span>
        <div class="form-group">
        <input type="submit" class="btn btn-block btn-lg btn-success" value="login">
        <span class="pull-right"><a href="#">Register</a></span>
