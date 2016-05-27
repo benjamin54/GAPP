@@ -9,13 +9,19 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class Deconnexion extends HttpServlet {
-    public static final String VUE = "/connexion";
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public static final String VUE = "/connexion";
 
-    public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
+    public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 //         destruction de la session
         HttpSession session = request.getSession();
         session.invalidate();
 
-        this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+       // this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+        response.sendRedirect( request.getContextPath()+VUE );
+
     }
 }

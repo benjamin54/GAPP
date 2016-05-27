@@ -78,6 +78,9 @@ a{
 	 background-image:url("../images/isep.jpg");
  background-size: cover;
 }
+.erreur{
+	color: red;
+}
 
 /* pour la page profilTuteur */
 .with-nav-tabs.panel-primary .nav-tabs > li > a,

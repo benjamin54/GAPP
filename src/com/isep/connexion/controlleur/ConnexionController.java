@@ -25,7 +25,7 @@ public class ConnexionController extends HttpServlet {
     public static final String ATT_FORM = "form";
     public static final String ATT_SESSION_USER = "sessionUser";
 	public static final String LOGIN = "/view/connex.jsp";
-	public static final String ETUDIANT = "/view/profilEtudiant.jsp";
+	public static final String ETUDIANT = "/view/AccueilEtudiant.jsp";
 	public static final String TUTEUR = "/view/ProfilTuteur.jsp";
   
     
