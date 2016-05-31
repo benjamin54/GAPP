@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31 mai 2016 12:01:41 by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="com.isep.metier.Notes" table="notes" catalog="mydb" optimistic-lock="version">
+        <composite-id name="id" class="com.isep.metier.NotesId">
+            <key-property name="idNotes" type="int">
+                <column name="idNotes" />
+            </key-property>
+            <key-property name="usersIdUsers" type="int">
+                <column name="Users_idUsers" />
+            </key-property>
+            <key-property name="competencesIdCompetences" type="int">
+                <column name="Competences_idCompetences" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="competences" class="com.isep.metier.Competences" update="false" insert="false" fetch="select">
+            <column name="Competences_idCompetences" not-null="true" />
+        </many-to-one>
+        <many-to-one name="users" class="com.isep.metier.Users" update="false" insert="false" fetch="select">
+            <column name="Users_idUsers" not-null="true" />
+        </many-to-one>
+        <property name="note" type="java.lang.Float">
+            <column name="Note" precision="12" scale="0" />
+        </property>
+        <property name="remarques" type="string">
+            <column name="Remarques" length="16777215" />
+        </property>
+    </class>
+</hibernate-mapping>
