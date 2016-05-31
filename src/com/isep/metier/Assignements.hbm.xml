@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31 mai 2016 12:01:41 by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="com.isep.metier.Assignements" table="assignements" catalog="mydb" optimistic-lock="version">
+        <id name="idAssignements" type="java.lang.Integer">
+            <column name="idAssignements" />
+            <generator class="identity" />
+        </id>
+        <property name="dueTime" type="timestamp">
+            <column name="DueTime" length="19" />
+        </property>
+        <property name="createdTime" type="timestamp">
+            <column name="CreatedTime" length="19" />
+        </property>
+        <property name="description" type="string">
+            <column name="Description" length="16777215" />
+        </property>
+        <set name="groupeses" table="assignements_has_groupes" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="Assignements_idAssignements" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.isep.metier.Groupes">
+                <column name="Groupes_idGroupes" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

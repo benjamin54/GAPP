@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31 mai 2016 12:01:41 by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="com.isep.metier.Users" table="users" catalog="mydb" optimistic-lock="version">
+        <id name="idUsers" type="java.lang.Integer">
+            <column name="idUsers" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="groupes" class="com.isep.metier.Groupes" fetch="select">
+            <column name="Groupes_NumGroupe" />
+        </many-to-one>
+        <property name="username" type="string">
+            <column name="Username" length="45" />
+        </property>
+        <property name="password" type="string">
+            <column name="Password" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="Email" length="45" />
+        </property>
+        <property name="rights" type="string">
+            <column name="Rights" length="45" />
+        </property>
+        <set name="noteses" table="notes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Users_idUsers" not-null="true" />
+            </key>
+            <one-to-many class="com.isep.metier.Notes" />
+        </set>
+        <set name="absenceses" table="absences" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Users_idUsers" not-null="true" />
+            </key>
+            <one-to-many class="com.isep.metier.Absences" />
+        </set>
+    </class>
+</hibernate-mapping>

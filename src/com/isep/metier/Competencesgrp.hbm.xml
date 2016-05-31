@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31 mai 2016 12:01:41 by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="com.isep.metier.Competencesgrp" table="competencesgrp" catalog="mydb" optimistic-lock="version">
+        <id name="idCompetencesGrp" type="java.lang.Integer">
+            <column name="idCompetencesGrp" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="famillecompetencesgrp" class="com.isep.metier.Famillecompetencesgrp" fetch="select">
+            <column name="FamilleCompetencesGrp_idFamilleCompetencesGrp" not-null="true" />
+        </many-to-one>
+        <property name="libelle" type="string">
+            <column name="Libelle" length="45" />
+        </property>
+        <set name="remarqueses" table="remarques" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CompetencesGrp_idCompetencesGrp" not-null="true" />
+            </key>
+            <one-to-many class="com.isep.metier.Remarques" />
+        </set>
+    </class>
+</hibernate-mapping>

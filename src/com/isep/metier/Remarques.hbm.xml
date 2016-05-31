@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31 mai 2016 12:01:41 by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="com.isep.metier.Remarques" table="remarques" catalog="mydb" optimistic-lock="version">
+        <composite-id name="id" class="com.isep.metier.RemarquesId">
+            <key-property name="idRemarques" type="int">
+                <column name="idRemarques" />
+            </key-property>
+            <key-property name="competencesGrpIdCompetencesGrp" type="int">
+                <column name="CompetencesGrp_idCompetencesGrp" />
+            </key-property>
+            <key-property name="groupesIdGroupes" type="int">
+                <column name="Groupes_idGroupes" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="competencesgrp" class="com.isep.metier.Competencesgrp" update="false" insert="false" fetch="select">
+            <column name="CompetencesGrp_idCompetencesGrp" not-null="true" />
+        </many-to-one>
+        <many-to-one name="groupes" class="com.isep.metier.Groupes" update="false" insert="false" fetch="select">
+            <column name="Groupes_idGroupes" not-null="true" />
+        </many-to-one>
+        <property name="remarque" type="string">
+            <column name="Remarque" length="16777215" />
+        </property>
+    </class>
+</hibernate-mapping>
