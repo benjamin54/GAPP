@@ -20,7 +20,7 @@
      <h3></h3>
 <div class="row">
 <section class="col-sm-8 col-md-8 col-lg-8">
-Bienvenue sur l'espace étudient de l'APP.</section>
+Bienvenue sur l'espace étudiant de l'APP.</section>
 </div>
 </div>
 
