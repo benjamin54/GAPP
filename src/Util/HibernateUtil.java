@@ -19,43 +19,32 @@
  */
 package Util;
 
-import org.hibernate.HibernateException;
+
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
-/**
- * TÅ™Ã­da pro vrÃ¡ceni session factory, tÅ™Ã­da Ä�Ã¡steÄ�nÄ› pÅ™evzatÃ¡ ze Å¡kolnÃ­ho projektu
- * 
- */
+
 public class HibernateUtil {
 
-    private static SessionFactory sessionFactory;
-
+    private static SessionFactory sessionFactory = buildSessionFactory();
     private static ServiceRegistry serviceRegistry;
-
-    /**
-     * VrÃ¡tÃ­ session factory
-     */
-    public static SessionFactory configureSessionFactory (String pripojovaciString, String prihlasovaciJmeno, String heslo, String driver, String dialect, String auto) throws HibernateException {
+    private static Session session= null;
+    
+    public static SessionFactory buildSessionFactory(){
 	try {
 	    Configuration configuration = new Configuration();
-
-	    configuration.configure();
-	    configuration.setProperty("hibernate.connection.url", pripojovaciString);
-	    configuration.setProperty("hibernate.connection.username", prihlasovaciJmeno);
-	    configuration.setProperty("hibernate.connection.password", heslo);
-	    configuration.setProperty("hibernate.connection.driver_class", driver);
-	    configuration.setProperty("hibernate.dialect", dialect);
-	    configuration.setProperty("hibernate.hbm2ddl.auto", auto);
+	    configuration.configure("config/hibernate.cfg.xml");
+	 
 	    serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
-	    sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-	} catch (Exception e) {
-	    throw e;
-	}
-	return sessionFactory;
+	    return configuration.buildSessionFactory(serviceRegistry);
+	} catch (Exception ex) {
+	    throw new ExceptionInInitializerError(ex);
+     }
     }
+    
     public static SessionFactory getSessionFactory() {
         return sessionFactory;
     }
