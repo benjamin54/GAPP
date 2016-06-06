@@ -102,14 +102,11 @@ public class Demo {
 	    	  mdp =session.createQuery("FROM Users WHERE username="+"'"+username+"'").list();
 	    	  for (Iterator iterator = 
                       mdp.iterator(); iterator.hasNext();){
-       Users user = (Users) iterator.next(); 
-       m=user.getPassword(); 
-
-	    	  }
-	    	  
+	    		  	Users user = (Users) iterator.next(); 
+	    		  	m=user.getPassword(); 
+	    	  }	    	  
 	    	  return m;
-	      }catch(HibernateException e){
-	    	  
+	      }catch(HibernateException e){    	  
 	    	  System.out.println("Erreur SQL");	   
 	    	  e.printStackTrace(); 
 	      }finally{
