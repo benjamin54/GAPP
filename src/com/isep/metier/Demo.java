@@ -13,10 +13,7 @@ import org.hibernate.Transaction;
 public class Demo {
 	public static void main(String[] args){
 		Demo D = new Demo();
-		D.create();
-		D.readUsers();
-		D.delete(3);
-		D.readUsers();
+		System.out.println(D.chargerMDP("test3"));
 		
 	}
 	public void create() {
@@ -95,5 +92,29 @@ public class Demo {
 	      }
 	   }
 	
+	public  String chargerMDP (String username){
+		 Session session = HibernateUtil.getSessionFactory().openSession();
+	      Transaction tx = null;
+	      String m=null;
+	      List mdp=null;
+	      try{
+	    	  tx=session.beginTransaction(); 
+	    	  mdp =session.createQuery("FROM Users WHERE username="+"'"+username+"'").list();
+	    	  for (Iterator iterator = 
+                      mdp.iterator(); iterator.hasNext();){
+	    		  	Users user = (Users) iterator.next(); 
+	    		  	m=user.getPassword(); 
+	    	  }	    	  
+	    	  return m;
+	      }catch(HibernateException e){    	  
+	    	  System.out.println("Erreur SQL");	   
+	    	  e.printStackTrace(); 
+	      }finally{
+	    	  session.close();
+	      }
+	      return m;
+	
+	
 	}
+}
 

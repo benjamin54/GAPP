@@ -1,23 +1,21 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC
-        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
- 
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <!-- Database connection settings -->
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/mydb</property>
-        <property name="connection.username">root</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mydb</property>
+        <property name="hibernate.connection.username">root</property>
         <property name="connection.password"></property>
         
         <!-- JDBC connection pool (use the built-in) -->
         <property name="connection.pool_size">1</property>
         
-        <!-- SQL dialect -->
-        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-
-        <!-- Disable the second-level cache  -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        
+        
+                <!-- Disable the second-level cache  -->
         <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
         
         <!-- Echo all executed SQL to stdout -->
@@ -30,6 +28,16 @@
         
         <!-- Mention here all the model classes along with their package name -->
  		<mapping class="metier.entities.Competences"/>
- 		 
+                
+        <mapping resource="com/isep/metier/Users.hbm.xml"/>
+        <mapping resource="com/isep/metier/Absences.hbm.xml"/>
+        <mapping resource="com/isep/metier/Assignements.hbm.xml"/>
+        <mapping resource="com/isep/metier/Competences.hbm.xml"/>
+        <mapping resource="com/isep/metier/Competencesgrp.hbm.xml"/>
+        <mapping resource="com/isep/metier/Famillecompetences.hbm.xml"/>
+        <mapping resource="com/isep/metier/Famillecompetencesgrp.hbm.xml"/>
+        <mapping resource="com/isep/metier/Groupes.hbm.xml"/>
+        <mapping resource="com/isep/metier/Notes.hbm.xml"/>
+        <mapping resource="com/isep/metier/Remarques.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
