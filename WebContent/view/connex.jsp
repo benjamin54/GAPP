@@ -39,6 +39,9 @@
 						<input type="submit" class="btn btn-block btn-lg btn-success"
 							value="login"><br>
 						<p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
+
+						<p>${sessionScope.sessionUser.username}</p> <!-- pour voir que la session est détruite -->
+
 						<span class="pull-right"><a href="#">Register</a></span> <span><a
 							href="#">Mot de passe oublié</a></span>
 					</div>
