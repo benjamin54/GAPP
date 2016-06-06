@@ -27,7 +27,7 @@
         <property name="hibernate.current_session_context_class">thread</property>
         
         <!-- Mention here all the model classes along with their package name -->
- 		<mapping class="metier.entities.Competences"/>
+ 		<mapping class="com.isep.metier.entities.Competences2"/>
                 
         <mapping resource="com/isep/metier/Users.hbm.xml"/>
         <mapping resource="com/isep/metier/Absences.hbm.xml"/>
