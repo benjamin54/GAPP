@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 
 import com.isep.connexion.model.ConnexionForm;
 import com.isep.eleve.model.Eleve;
+import com.isep.metier.Demo;
 
 /**
  * Servlet implementation class Connexion
@@ -56,12 +57,14 @@ public class ConnexionController extends HttpServlet {
 
         ConnexionForm form = new ConnexionForm();
         Eleve eleve = form.connecterUser( request );
-
-        HttpSession session = request.getSession();
+        Demo demo = new Demo();
+        
+        HttpSession session1 = request.getSession();
         if ( form.getErreurs().isEmpty() ) {
-            session.setAttribute( ATT_SESSION_USER, eleve );
+            session1.setAttribute( ATT_SESSION_USER, eleve );
+            demo.chargerMDP(eleve.getUsername());
         } else {
-            session.setAttribute( ATT_SESSION_USER, null );
+            session1.setAttribute( ATT_SESSION_USER, null );
         }
         
         request.setAttribute( ATT_FORM, form );

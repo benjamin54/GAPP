@@ -11,11 +11,11 @@ import org.hibernate.Transaction;
 
 
 public class Demo {
-	public static void main(String[] args){
-		Demo D = new Demo();
-		System.out.println(D.chargerMDP("test3"));
-		
-	}
+//	public static void main(String[] args){
+//		Demo D = new Demo();
+//		System.out.println(D.chargerMDP("test3"));
+//		
+//	}
 	public void create() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction tx=  session.beginTransaction();
