@@ -40,7 +40,8 @@
 							value="login"><br>
 						<p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
 
-						<p>${sessionScope.sessionUser.email}</p> <!-- pour voir que la session est détruite -->
+						<p>${sessionScope.sessionUser.email}</p>
+						<!-- pour voir que la session est détruite -->
 
 						<span class="pull-right"><a href="#">Register</a></span> <span><a
 							href="#">Mot de passe oublié</a></span>
