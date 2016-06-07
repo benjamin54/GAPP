@@ -11,44 +11,31 @@
 <script src="ressources/js/jquery.js"></script> 
 <body>
 <div class="container">
-<h3>Fixed Navbar</h3>
-<div class="row">
-  <div class="col-sm-4 col-md-4 col-lg-4">
-<%@include file="HeaderEleve.jsp" %> </div>
-<div class="col-sm-8 col-md-8 col-lg-8">
 
- <div class="row">
-    <div class="col-md-3">
-     <ul class="nav nav-pills nav-stacked">
-        <li><a href="AccueilEtudiant.jsp">ACCUEIL</a></li>
-        <li><a href="profilEtudiant.jsp">MON PROFIL</a></li>
-        <li><a href="RechercheProf.jsp">RECHERCHER</a></li>
-        <li class="active"><a href="EvaluationsEtudiants.jsp">GRILLE DE COMPETENCES</a></li>
-        <li><a href="Groupe.jsp">MON GROUPE</a></li>
-      </ul>
+<div class="row" style="padding-top:110Px;">
+  <div class="col-sm-4 col-md-4 col-lg-4">
+<%@include file="HeaderEleve.jsp" %> 
+</div>
+<div class="col-sm-8 col-md-8 col-lg-8">
+       <div class="panel with-nav-tabs panel-success">
+                <div class="panel-heading clearfix">
+                    <div class="pull-left">
+                        <h1 class="panel-title">CRITERES D'EVALUATION</h1>
+                    </div>
+                    <div class="pull-right">
+                        <ul class="nav nav-tabs">
              <c:forEach items="${Famille}" var="C">
-              
-              <li class="active"><a href="#tab1primary" data-toggle="tab">${C.Nom}</a></li>
+                  <li class="active"><a href="#tab1primary" data-toggle="tab">${C.Nom}</a></li>
 <!--                     <li><a href="#tab2primary" data-toggle="tab">TRAVAIL EN EQUIPE</a></li> -->
 <!--                      <li><a href="#tab3primary" data-toggle="tab">CONDUITE DE PROJET</a></li> -->
 <!--                    <li><a href="#tab4primary" data-toggle="tab">REALISER UNE APPLICATION INFORMATIQUE</a></li> -->
 <!--             <li><a href="#tab5primary" data-toggle="tab">PROFESSIONNEL RESPONSABLE</a></li> -->
+                
                              </c:forEach>
+                </ul>
+        </div>                    
     </div>
-    <div class="col-md-9">
->>>>>>> origin/Michele2
-       <div class="panel with-nav-tabs panel-success">
-                <div class="panel-heading clearfix" style ="padding-top:10px;">
-                    <div class="pull-left">
-                        <h1 class="panel-title">CRITERES D'EVALUATION</h1>
-                    </div>
-                     <div class="pull-right">
-                        <ul class="nav nav-tabs">
-                   
-                        </ul>
-                    </div>
-                </div>
-              
+            
   <div class="panel-body">
     <div class="tab-content">
        <div id="tab1primary" class="tab-pane fade in active">
@@ -2184,14 +2171,15 @@ javaScript:AJAX</li>
                 </div>
             </div>
          </div>
-
+    </div>
+  </div>
+</div>
       <div class="row">
       <div class="col-sm-offset-6">
       <p>Ma note finale provisoire: </p>
-      </div>
- </div>
-       </div>
-       </div>
-
+                   </div>
+                 </div>
+            </div>
+       
  </body>
 </html>

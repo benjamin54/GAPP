@@ -18,9 +18,9 @@
 <div class="container">
      <h3>Fixed Navbar</h3>
 <div class="row">
-  <div class="col-sm-3 col-md-3 col-lg-3">
+  <div class="col-sm-4 col-md-4 col-lg-4">
 <%@include file="Header.jsp" %> </div>
-<div class="col-sm-9 col-md-9 col-lg-9">
+<div class="col-sm-8 col-md-8 col-lg-8">
 <div class="container">
      <h3></h3>
 <div class="row">

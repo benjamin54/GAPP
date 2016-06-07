@@ -30,17 +30,10 @@
 <div class="container" style=" margin-top:110Px;">
 
  <div class="row">
-    <div class="col-md-3">
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#">Groupes encadrés</a></li>
-        <li><a href="#">Rechercher</a></li>
-        <li class="active"><a href="Evaluations.jsp">Grille de compétences</a></li>
-        <li><a href="Informations sur lestudiants.jsp">Informations sur les étudiants</a></li>
-        <li><a href="#">Noter les abscences</a></li>
-        <li><a href="#">Agenda</a></li>
-      </ul>
-    </div>
-    <div class="col-md-9">
+    <div class="col-sm-4 col-md-4 col-lg-4">
+   <%@include file="Header.jsp" %> 
+   </div>
+    <div class="col-sm-8 col-md-8 col-lg-8">
        <div class="panel with-nav-tabs panel-success">
                 <div class="panel-heading clearfix">
                     <div class="pull-left">

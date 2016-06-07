@@ -14,7 +14,7 @@
      <h3>Fixed Navbar</h3>
 <div class="row">
   <div class="col-sm-4 col-md-4 col-lg-4">
-<%@include file="Header.jsp" %> </div>
+<%@include file="HeaderAdmin.jsp" %> </div>
 <div class="col-sm-8 col-md-8 col-lg-8">
 
 <div class="container">
@@ -34,7 +34,7 @@
     <label for="exampleInputName2">Description</label>
     <input type="text" class="form-control" id="Nomevent" >
   </div>
-  <a href="grille.jsp" class="btn btn-info" role="button">envoyer</a>
+  <a href="ModifierGrille.jsp" class="btn btn-info" role="button">envoyer</a>
 </div>
 </div>
 </div>

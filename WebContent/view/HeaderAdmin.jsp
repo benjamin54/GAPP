@@ -29,6 +29,7 @@
       
       	<li><a href="AdministrationEleve.jsp">Administration élève</a></li>
       	<li><a href="AdministrationTuteur.jsp">Administration tuteur</a></li>
+      	 <li><a href="ModifierGrille.jsp">Grille de compétences</a></li>
       	
        
   
