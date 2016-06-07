@@ -6,6 +6,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import com.isep.eleve.model.Eleve;
+import com.isep.metier.Users;
 
 public final class ConnexionForm {
     private static final String CHAMP_USER  = "username";
@@ -22,12 +23,12 @@ public final class ConnexionForm {
         return erreurs;
     }
 
-    public Eleve connecterUser( HttpServletRequest request ) {
+    public Users connecterUser( HttpServletRequest request ) {
         /* Récupération des champs du formulaire */
         String username = getValeurChamp( request, CHAMP_USER );
         String password = getValeurChamp( request, CHAMP_PASS );
 
-        Eleve eleve = new Eleve();
+        Users eleve = new Users();
 
         /* Validation du champ email. */
         try {

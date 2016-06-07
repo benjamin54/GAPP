@@ -26,7 +26,7 @@
 					action="connexion">
 					<div class="form-group">
 						<input type="email" name="username"
-							value="<c:out value="${param.username}"/>"
+							value="<c:out value="${param.email}"/>"
 							class="form-control input-lg" placeholder="username" required
 							autofocus /><br> <span class="erreur">${form.erreurs['username']}</span>
 					</div>
@@ -39,7 +39,7 @@
 						<input type="submit" class="btn btn-block btn-lg btn-success"
 							value="login"><br>
 						<p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
-						<p>${sessionScope.sessionUser.username}</p> <!-- pour voir que la session est détruite -->
+						<p>${sessionScope.sessionUser.email}</p> <!-- pour voir que la session est détruite -->
 						<span class="pull-right"><a href="#">Register</a></span> <span><a
 							href="#">Mot de passe oublié</a></span>
 					</div>
