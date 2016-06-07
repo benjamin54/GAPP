@@ -1,5 +1,7 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html PUBLIC>
 <html>
 <head>
@@ -36,6 +38,14 @@
         <li class="active"><a href="EvaluationsEtudiants.jsp">GRILLE DE COMPETENCES</a></li>
         <li><a href="Groupe.jsp">MON GROUPE</a></li>
       </ul>
+             <c:forEach items="${Famille}" var="C">
+              
+              <li class="active"><a href="#tab1primary" data-toggle="tab">${C.Nom}</a></li>
+<!--                     <li><a href="#tab2primary" data-toggle="tab">TRAVAIL EN EQUIPE</a></li> -->
+<!--                      <li><a href="#tab3primary" data-toggle="tab">CONDUITE DE PROJET</a></li> -->
+<!--                    <li><a href="#tab4primary" data-toggle="tab">REALISER UNE APPLICATION INFORMATIQUE</a></li> -->
+<!--             <li><a href="#tab5primary" data-toggle="tab">PROFESSIONNEL RESPONSABLE</a></li> -->
+                             </c:forEach>
     </div>
     <div class="col-md-9">
        <div class="panel with-nav-tabs panel-success">
@@ -45,15 +55,11 @@
                     </div>
                      <div class="pull-right">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab1primary" data-toggle="tab">COMMUNICATION</a></li>
-                            <li><a href="#tab2primary" data-toggle="tab">TRAVAIL EN EQUIPE</a></li>
-                            <li><a href="#tab3primary" data-toggle="tab">CONDUITE DE PROJET</a></li>
-                            <li><a href="#tab4primary" data-toggle="tab">REALISER UNE APPLICATION INFORMATIQUE</a></li>
-                            <li><a href="#tab5primary" data-toggle="tab">PROFESSIONNEL RESPONSABLE</a></li>
+                   
                         </ul>
                     </div>
                 </div>
-                
+              
   <div class="panel-body">
     <div class="tab-content">
        <div id="tab1primary" class="tab-pane fade in active">

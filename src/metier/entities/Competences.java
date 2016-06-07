@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
-@Table(name="Competences")
+@Table(name="Comp")
 public class Competences implements Serializable{
  @Id
  @GeneratedValue(strategy=GenerationType.IDENTITY)
