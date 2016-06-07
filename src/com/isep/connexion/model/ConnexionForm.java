@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import com.isep.metier.Users;
 
 public final class ConnexionForm {
-    private static final String CHAMP_USER  = "username";
+    private static final String CHAMP_USER  = "email";
     private static final String CHAMP_PASS   = "password";
 
     private String              resultat;
@@ -24,18 +24,18 @@ public final class ConnexionForm {
 
     public Users connecterUser( HttpServletRequest request ) {
         /* Récupération des champs du formulaire */
-        String username = getValeurChamp( request, CHAMP_USER );
+        String email = getValeurChamp( request, CHAMP_USER );
         String password = getValeurChamp( request, CHAMP_PASS );
 
         Users user = new Users();
 
         /* Validation du champ email. */
         try {
-            validationEmail(username);
+            validationEmail(email);
         } catch ( Exception e ) {
             setErreur( CHAMP_USER, e.getMessage() );
         }
-        user.setUsername(username);
+        user.setEmail(email);
 
         /* Validation du champ mot de passe. */
         try {

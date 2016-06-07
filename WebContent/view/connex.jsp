@@ -25,10 +25,10 @@
 				<form class="col-md-12 center-block" method="post"
 					action="connexion">
 					<div class="form-group">
-						<input type="email" name="username"
-							value="<c:out value="${param.username}"/>"
-							class="form-control input-lg" placeholder="username" required
-							autofocus /><br> <span class="erreur">${form.erreurs['username']}</span>
+						<input type="email" name="email"
+							value="<c:out value="${param.email}"/>"
+							class="form-control input-lg" placeholder="email" required
+							autofocus /><br> <span class="erreur">${form.erreurs['email']}</span>
 					</div>
 					<div class="form-group">
 						<input type="password" name="password"
@@ -40,7 +40,7 @@
 							value="login"><br>
 						<p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
 
-						<p>${sessionScope.sessionUser.username}</p> <!-- pour voir que la session est détruite -->
+						<p>${sessionScope.sessionUser.email}</p> <!-- pour voir que la session est détruite -->
 
 						<span class="pull-right"><a href="#">Register</a></span> <span><a
 							href="#">Mot de passe oublié</a></span>
