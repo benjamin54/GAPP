@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import com.isep.connexion.model.ConnexionForm;
 import com.isep.eleve.model.Eleve;
 import com.isep.metier.Demo;
+import com.isep.metier.Users;
 
 /**
  * Servlet implementation class Connexion
@@ -56,23 +57,19 @@ public class ConnexionController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         ConnexionForm form = new ConnexionForm();
-        Eleve eleve = form.connecterUser( request );
+        Users user = form.connecterUser( request );
         Demo demo = new Demo();
         
+        
         HttpSession session1 = request.getSession();
-        if ( form.getErreurs().isEmpty() ) {
-            session1.setAttribute( ATT_SESSION_USER, eleve );
-            demo.chargerMDP(eleve.getUsername());
+        if ( form.getErreurs().isEmpty() && user.getPassword()==demo.chargerMDP(user.getEmail())) {
+        	   session1.setAttribute( ATT_SESSION_USER, user );
+               request.setAttribute( ATT_FORM, form );
+               request.setAttribute( ATT_USER, user );
+               
+               this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );
         } else {
             session1.setAttribute( ATT_SESSION_USER, null );
-        }
-        
-        request.setAttribute( ATT_FORM, form );
-        request.setAttribute( ATT_USER, eleve );
-       
-        if ( form.getErreurs().isEmpty() ) {
-            this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );
-        } else {
             this.getServletContext().getRequestDispatcher( LOGIN ).forward( request, response );
         }
     }

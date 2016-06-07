@@ -5,7 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.isep.eleve.model.Eleve;
+import com.isep.metier.Users;
 
 public final class ConnexionForm {
     private static final String CHAMP_USER  = "username";
@@ -22,12 +22,12 @@ public final class ConnexionForm {
         return erreurs;
     }
 
-    public Eleve connecterUser( HttpServletRequest request ) {
+    public Users connecterUser( HttpServletRequest request ) {
         /* Récupération des champs du formulaire */
         String username = getValeurChamp( request, CHAMP_USER );
         String password = getValeurChamp( request, CHAMP_PASS );
 
-        Eleve eleve = new Eleve();
+        Users user = new Users();
 
         /* Validation du champ email. */
         try {
@@ -35,7 +35,7 @@ public final class ConnexionForm {
         } catch ( Exception e ) {
             setErreur( CHAMP_USER, e.getMessage() );
         }
-        eleve.setUsername(username);
+        user.setUsername(username);
 
         /* Validation du champ mot de passe. */
         try {
@@ -43,7 +43,7 @@ public final class ConnexionForm {
         } catch ( Exception e ) {
             setErreur( CHAMP_PASS, e.getMessage() );
         }
-        eleve.setPassword(password);
+        user.setPassword(password);
 
         /* Initialisation du résultat global de la validation. */
         if ( erreurs.isEmpty() ) {
@@ -52,7 +52,7 @@ public final class ConnexionForm {
             resultat = "Échec de la connexion.";
         }
 
-        return eleve;
+        return user;
     }
 
     /**
