@@ -55,15 +55,18 @@ public class ConnexionController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         ConnexionForm form = new ConnexionForm();
-        Users eleve = form.connecterUser( request );
+       Users eleve = form.connecterUser( request );
         Demo demo = new Demo();
+        HttpSession session = request.getSession();
         request.setAttribute( ATT_FORM, form );
         request.setAttribute( ATT_USER, eleve );
-        HttpSession session = request.getSession();
-        if ( form.getErreurs().isEmpty() && eleve.getPassword()==demo.chargerMDP(eleve.getEmail()) ) {
+
+        if ( form.getErreurs().isEmpty() && eleve.getPassword().equals(demo.chargerMDP(eleve.getEmail())) ) {
             session.setAttribute( ATT_SESSION_USER, eleve );
             this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );
         } else {
+            
+            this.getServletContext().getRequestDispatcher( LOGIN ).forward( request, response );
             session.setAttribute( ATT_SESSION_USER, null );
         }
         
@@ -72,7 +75,7 @@ public class ConnexionController extends HttpServlet {
         if ( form.getErreurs().isEmpty() ) {
            
         } else {
-            this.getServletContext().getRequestDispatcher( LOGIN ).forward( request, response );
+            
         }
     }
 }    

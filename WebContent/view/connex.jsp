@@ -25,10 +25,10 @@
 				<form class="col-md-12 center-block" method="post"
 					action="connexion">
 					<div class="form-group">
-						<input type="email" name="username"
-							value="<c:out value="${param.email}"/>"
-							class="form-control input-lg" placeholder="username" required
-							autofocus /><br> <span class="erreur">${form.erreurs['username']}</span>
+						<input type="email" name="email" id="email"
+							value="<c:out value="${user.email}"/>"
+							class="form-control input-lg" placeholder="email" required
+							autofocus /><br> <span class="erreur">${form.erreurs['email']}</span>
 					</div>
 					<div class="form-group">
 						<input type="password" name="password"

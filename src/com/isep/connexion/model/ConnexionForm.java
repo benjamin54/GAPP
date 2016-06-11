@@ -9,7 +9,7 @@ import com.isep.eleve.model.Eleve;
 import com.isep.metier.Users;
 
 public final class ConnexionForm {
-    private static final String CHAMP_USER  = "username";
+    private static final String CHAMP_EMAIL ="email";
     private static final String CHAMP_PASS   = "password";
 
     private String              resultat;
@@ -25,18 +25,18 @@ public final class ConnexionForm {
 
     public Users connecterUser( HttpServletRequest request ) {
         /* Récupération des champs du formulaire */
-        String username = getValeurChamp( request, CHAMP_USER );
+        String email = getValeurChamp( request, CHAMP_EMAIL );
         String password = getValeurChamp( request, CHAMP_PASS );
 
         Users eleve = new Users();
 
         /* Validation du champ email. */
         try {
-            validationEmail(username);
+            validationEmail(email);
         } catch ( Exception e ) {
-            setErreur( CHAMP_USER, e.getMessage() );
+            setErreur( CHAMP_EMAIL, e.getMessage() );
         }
-        eleve.setUsername(username);
+        eleve.setEmail(email);
 
         /* Validation du champ mot de passe. */
         try {
@@ -59,9 +59,9 @@ public final class ConnexionForm {
     /**
      * Valide l'adresse email saisie.
      */
-    private void validationEmail( String username ) throws Exception {
-    	 if ( username != null ) {
-    	        if ( !username.matches( "([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)" ) ) {
+    private void validationEmail( String email ) throws Exception {
+    	 if ( email != null ) {
+    	        if ( !email.matches( "([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)" ) ) {
     	            throw new Exception( "Merci de saisir une adresse mail valide." );
     	        }
     	    } else {
