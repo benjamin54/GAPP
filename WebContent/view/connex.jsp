@@ -26,7 +26,7 @@
 					action="connexion">
 					<div class="form-group">
 						<input type="email" name="email" id="email"
-							value="<c:out value="${user.email}"/>"
+							value="<c:out value="${param.email}"/>"
 							class="form-control input-lg" placeholder="email" required
 							autofocus /><br> <span class="erreur">${form.erreurs['email']}</span>
 					</div>

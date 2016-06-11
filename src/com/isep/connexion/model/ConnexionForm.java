@@ -28,7 +28,7 @@ public final class ConnexionForm {
         String email = getValeurChamp( request, CHAMP_EMAIL );
         String password = getValeurChamp( request, CHAMP_PASS );
 
-        Users eleve = new Users();
+        Users user = new Users();
 
         /* Validation du champ email. */
         try {
@@ -36,7 +36,7 @@ public final class ConnexionForm {
         } catch ( Exception e ) {
             setErreur( CHAMP_EMAIL, e.getMessage() );
         }
-        eleve.setEmail(email);
+        user.setEmail(email);
 
         /* Validation du champ mot de passe. */
         try {
@@ -44,7 +44,7 @@ public final class ConnexionForm {
         } catch ( Exception e ) {
             setErreur( CHAMP_PASS, e.getMessage() );
         }
-        eleve.setPassword(password);
+        user.setPassword(password);
 
         /* Initialisation du résultat global de la validation. */
         if ( erreurs.isEmpty() ) {
@@ -53,7 +53,7 @@ public final class ConnexionForm {
             resultat = "Échec de la connexion.";
         }
 
-        return eleve;
+        return user;
     }
 
     /**
