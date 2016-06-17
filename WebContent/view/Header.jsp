@@ -10,7 +10,7 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="ressources/js/jquery.js"></script> 
-<script type="text/javascript" src="coucou.js"></script> 
+   <script type="text/javascript" src="coucou.js"></script>
  
 <body>
 <nav class="navbar navbar-dark bg-success navbar-fixed-top" style=" padding-top:20px;">
