@@ -63,7 +63,7 @@ public class ConnexionController extends HttpServlet {
 		HttpSession session1 = request.getSession();
 		request.setAttribute( ATT_FORM, form );
 		request.setAttribute( ATT_USER, user );
-		if ( form.getErreurs().isEmpty() && user.getPassword() == demo.chargerMDP(user.getEmail())) {
+		if ( form.getErreurs().isEmpty() && user.getPassword().equals(demo.chargerMDP(user.getEmail()))) {
 			session1.setAttribute( ATT_SESSION_USER, user );
 			System.out.println("test requête");
 			
