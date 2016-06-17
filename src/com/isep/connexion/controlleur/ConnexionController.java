@@ -55,18 +55,18 @@ public class ConnexionController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		ConnexionForm form = new ConnexionForm();
-		Users user = form.connecterUser( request );
+		ConnexionForm form = new ConnexionForm();  //Objet métier connexion, pas connectée à la db ça, ça a les attributs email et password
+		Users user = form.connecterUser( request ); // Objet métier hibernate user, on lui donne ici les valeurs de email et password entrés formulaire
 		Demo demo = new Demo();
 
-
-		HttpSession session1 = request.getSession();
+		HttpSession session = request.getSession();  //1ere session qui est une session normale
 		request.setAttribute( ATT_FORM, form );
 		request.setAttribute( ATT_USER, user );
-		if ( form.getErreurs().isEmpty() && user.getPassword() == demo.chargerMDP(user.getEmail())) {
-			session1.setAttribute( ATT_SESSION_USER, user );
+		if ( form.getErreurs().isEmpty() && user.getPassword().equals(demo.chargerMDP(user.getEmail()))) { //bug ici ça envoie direct la page 
+//			LOGIN au lieu de ETUDIANT 
+//			session.setAttribute( ATT_SESSION_USER, user );
 			System.out.println("test requête");
-			
+
 			String rights = user.getRights();
 			if (rights.equals(".")){
 				this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );
@@ -77,8 +77,9 @@ public class ConnexionController extends HttpServlet {
 			else if (rights.equals("...")) {
 				this.getServletContext().getRequestDispatcher( ADMIN ).forward( request, response );
 			} 
+			
 		} else {
-			session1.setAttribute( ATT_SESSION_USER, null );
+			session.setAttribute( ATT_SESSION_USER, null );
 			this.getServletContext().getRequestDispatcher( LOGIN ).forward( request, response );
 		}
 	}

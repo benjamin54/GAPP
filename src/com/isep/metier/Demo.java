@@ -93,14 +93,15 @@ public class Demo {
 	      }
 	   }
 	
-	public  String chargerMDP (String email){
-		 Session session = HibernateUtil.getSessionFactory().openSession();
+	public  String chargerMDP (String email){  //fonction qui est censée trouver l'user par son mail entré et voir si le password en 
+		//base est le même que celui entré
+		 Session session = HibernateUtil.getSessionFactory().openSession();  //nouvelle session hibernate
 	      Transaction tx = null;
 	      String m=null;
 	      List mdp=null;
 	      try{
 	    	  tx=session.beginTransaction(); 
-	    	  mdp =session.createQuery("FROM Users WHERE email="+"'"+email+"'").list();
+	    	  mdp =session.createQuery("FROM Users WHERE email="+"'"+email+"'").list(); //prend mail
 	    	  for (Iterator iterator = 
                       mdp.iterator(); iterator.hasNext();){
 	    		  	Users user = (Users) iterator.next(); 
@@ -113,9 +114,18 @@ public class Demo {
 	      }finally{
 	    	  session.close();
 	      }
-	      return m;
+	      return m;  //retourne mot de passe
 	
 	
 	}
 }
+
+
+
+
+
+
+
+
+
 
