@@ -62,9 +62,9 @@ public class ConnexionController extends HttpServlet {
 		HttpSession session = request.getSession();  //1ere session qui est une session normale
 		request.setAttribute( ATT_FORM, form );
 		request.setAttribute( ATT_USER, user );
-		if ( form.getErreurs().isEmpty() && user.getPassword().equals(demo.chargerMDP(user.getEmail()))) { //bug ici ça envoie direct la page 
-//			LOGIN au lieu de ETUDIANT 
-//			session.setAttribute( ATT_SESSION_USER, user );
+
+		if ( form.getErreurs().isEmpty() && user.getPassword().equals(demo.chargerMDP(user.getEmail()))) {
+			session.setAttribute( ATT_SESSION_USER, user );
 			System.out.println("test requête");
 
 			String rights = user.getRights();

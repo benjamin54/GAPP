@@ -1,8 +1,11 @@
 package com.isep.metier;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -97,7 +100,7 @@ public class Demo {
 		//base est le même que celui entré
 		 Session session = HibernateUtil.getSessionFactory().openSession();  //nouvelle session hibernate
 	      Transaction tx = null;
-	      String m=null;
+	      String motdp=null;
 	      List mdp=null;
 	      try{
 	    	  tx=session.beginTransaction(); 
@@ -105,18 +108,34 @@ public class Demo {
 	    	  for (Iterator iterator = 
                       mdp.iterator(); iterator.hasNext();){
 	    		  	Users user = (Users) iterator.next(); 
-	    		  	m=user.getPassword(); 
+	    		  	motdp=user.getPassword(); 
 	    	  }	    	  
-	    	  return m;
+	    	  return motdp;
 	      }catch(HibernateException e){    	  
 	    	  System.out.println("Erreur SQL");	   
 	    	  e.printStackTrace(); 
 	      }finally{
 	    	  session.close();
 	      }
-	      return m;  //retourne mot de passe
+	      return motdp;	
+	}
 	
-	
+	public List chargerUser(String emailUser){
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction tx=null;
+//		Map<String,String>  results = new HashMap<String,String>();
+		try{
+			tx=session.beginTransaction();
+			Users UserBase = (Users)session.get(Users.class, emailUser);
+			Resultset results= session.createQuery("SELECT * FROM users WHERE email ="+emailUser).map();
+			for(Object[] row : results){
+				
+			}
+		}catch(Exception e){
+			System.out.println("erreur fonction chargerUser()" );
+		}finally{}
+		String ;
+		return results;
 	}
 }
 
