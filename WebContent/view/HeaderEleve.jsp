@@ -27,10 +27,10 @@
 	</nav>
 	
 	<ul class="nav nav-pills nav-stacked">
-		<li><a href="AccueilEtudiant.jsp">ACCUEIL</a></li>
-		<li><a href="profilEtudiant.jsp">MON PROFIL</a></li>
-		<li><a href="EvaluationsEtudiants.jsp">GRILLE DE COMPETENCES</a></li>
-		<li><a href="GroupeEleve.jsp">MON GROUPE</a></li>
+		<li><a href="view/AccueilEtudiant.jsp">ACCUEIL</a></li>
+		<li><a href="view/profilEtudiant.jsp">MON PROFIL</a></li>
+		<li><a href="view/EvaluationsEtudiants.jsp">GRILLE DE COMPETENCES</a></li>
+		<li><a href="view/Groupe.jsp">MON GROUPE</a></li>
 	</ul>
 </head>
 </html>

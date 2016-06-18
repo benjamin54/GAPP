@@ -65,18 +65,18 @@ public class ConnexionController extends HttpServlet {
 
 		if ( form.getErreurs().isEmpty() && user.getPassword().equals(demo.chargerMDP(user.getEmail()))) {
 			session.setAttribute( ATT_SESSION_USER, user );
-			System.out.println("test requête");
 
-			String rights = user.getRights();
-			if (rights.equals(".")){
-				this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );
-			}
-			else if (rights.equals("..")) {
-				this.getServletContext().getRequestDispatcher( TUTEUR ).forward( request, response );
-			} 
-			else if (rights.equals("...")) {
-				this.getServletContext().getRequestDispatcher( ADMIN ).forward( request, response );
-			} 
+			this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );
+//			String rights = user.getRights();
+//			if (rights.equals(".")){
+//				this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );
+//			}
+//			else if (rights.equals("..")) {
+//				this.getServletContext().getRequestDispatcher( TUTEUR ).forward( request, response );
+//			} 
+//			else if (rights.equals("...")) {
+//				this.getServletContext().getRequestDispatcher( ADMIN ).forward( request, response );
+//			} 
 			
 		} else {
 			session.setAttribute( ATT_SESSION_USER, null );

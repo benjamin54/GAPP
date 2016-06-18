@@ -120,23 +120,23 @@ public class Demo {
 	      return motdp;	
 	}
 	
-	public List chargerUser(String emailUser){
-		Session session = HibernateUtil.getSessionFactory().openSession();
-		Transaction tx=null;
-//		Map<String,String>  results = new HashMap<String,String>();
-		try{
-			tx=session.beginTransaction();
-			Users UserBase = (Users)session.get(Users.class, emailUser);
-			Resultset results= session.createQuery("SELECT * FROM users WHERE email ="+emailUser).map();
-			for(Object[] row : results){
-				
-			}
-		}catch(Exception e){
-			System.out.println("erreur fonction chargerUser()" );
-		}finally{}
-		String ;
-		return results;
-	}
+//	public List chargerUser(String emailUser){
+//		Session session = HibernateUtil.getSessionFactory().openSession();
+//		Transaction tx=null;
+////		Map<String,String>  results = new HashMap<String,String>();
+//		try{
+//			tx=session.beginTransaction();
+//			Users UserBase = (Users)session.get(Users.class, emailUser);
+//			Resultset results= session.createQuery("SELECT * FROM users WHERE email ="+emailUser).map();
+//			for(Object[] row : results){
+//				
+//			}
+//		}catch(Exception e){
+//			System.out.println("erreur fonction chargerUser()" );
+//		}finally{}
+//		String ;
+//		return results;
+//	}
 }
 
 
