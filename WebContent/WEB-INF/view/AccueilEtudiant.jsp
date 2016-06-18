@@ -10,6 +10,8 @@
 <link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet"> 
 <script src="ressources/js/jquery.js"></script> 
 <body>
+
+<form method="get" action="controleur.jsp" >
 <div class="container">
   <h3>Fixed Navbar</h3>
 <div class="row">
@@ -27,5 +29,6 @@ Bienvenue sur l'espace étudiant de l'APP.</section>
   </div>
   </div>
            </div>
+           </form>
 </body>
 </html>

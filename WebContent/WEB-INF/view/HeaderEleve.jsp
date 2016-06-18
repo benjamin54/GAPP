@@ -12,7 +12,7 @@
 <script src="ressources/js/jquery.js"></script> 
 
  <body>
- 
+
   <nav class="navbar navbar-dark bg-success navbar-fixed-top"
 		style="padding-top: 20px;">
 		<div class="container">
@@ -27,10 +27,10 @@
 	</nav>
 	
 	<ul class="nav nav-pills nav-stacked">
-		<li><a href="view/AccueilEtudiant.jsp">ACCUEIL</a></li>
-		<li><a href="view/profilEtudiant.jsp">MON PROFIL</a></li>
-		<li><a href="view/EvaluationsEtudiants.jsp">GRILLE DE COMPETENCES</a></li>
-		<li><a href="view/Groupe.jsp">MON GROUPE</a></li>
+		<li><a href="http://localhost:8080/GAPP/*.php">ACCUEIL</a></li>
+		<li><a href="http://localhost:8080/GAPP/view/profilEtudiant.jsp">MON PROFIL</a></li>
+		<li><a href="http://localhost:8080/GAPP/view/EvaluationsEtudiants.jsp">GRILLE DE COMPETENCES</a></li>
+		<li><a href="http://localhost:8080/GAPP/view/Groupe.jsp">MON GROUPE</a></li>
 	</ul>
 </head>
 </html>

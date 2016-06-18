@@ -9,7 +9,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="ressources/js/jquery.js"></script> 
+
 <body>
+<form method="get" action="ProfilTuteur.jsp">
 <div class="container">
      <h3>Fixed Navbar</h3>
 <div class="row">
@@ -43,6 +45,6 @@
 </div>
 </div>
 </div>
-
+ </form>
 </body>
 </html>
