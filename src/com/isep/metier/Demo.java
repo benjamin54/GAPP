@@ -1,4 +1,6 @@
 package com.isep.metier;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -16,8 +18,8 @@ import org.hibernate.Transaction;
 public class Demo {
 	public static void main(String[] args){
 		Demo D = new Demo();
-		System.out.println(D.chargerMDP("bdubus@isep.fr"));
-		
+
+		System.out.println(D.chargerUser("email@email.com").getRights());
 	}
 
 	public void create() {
@@ -119,23 +121,26 @@ public class Demo {
 	      }
 	      return motdp;	
 	}
-	
-	public List chargerUser(String emailUser){
+	/**
+	 * Envoie les infos de l'utilisateur de la bdd
+	 * @param emailUser
+	 * @return
+	 */
+	public Users chargerUser(String emailUser){
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction tx=null;
-//		Map<String,String>  results = new HashMap<String,String>();
+		List  results= null ;
+		Map<String,ArrayList<String>> resultDef = new HashMap<String,ArrayList<String>>();
 		try{
 			tx=session.beginTransaction();
-			Users UserBase = (Users)session.get(Users.class, emailUser);
-			Resultset results= session.createQuery("SELECT * FROM users WHERE email ="+emailUser).map();
-			for(Object[] row : results){
-				
-			}
+			Users user=(Users) session.createQuery("FROM Users WHERE email ="+"'"+emailUser+"'").uniqueResult();
+			System.out.println(resultDef);
+			return user;
 		}catch(Exception e){
+			e.printStackTrace();
 			System.out.println("erreur fonction chargerUser()" );
+			return null;
 		}finally{}
-		String ;
-		return results;
 	}
 }
 

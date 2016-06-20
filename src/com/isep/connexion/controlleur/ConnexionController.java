@@ -29,7 +29,7 @@ public class ConnexionController extends HttpServlet {
 	public static final String ETUDIANT = "/view/AccueilEtudiant.jsp";
 	public static final String TUTEUR = "/view/ProfilTuteur.jsp";
 	public static final String ADMIN = "/view/ProfilAdmin.jsp";
-	public static final String RESPO = "/view/ProfilTuteur.jsp";
+
 
 
 	/**
@@ -67,7 +67,8 @@ public class ConnexionController extends HttpServlet {
 			session.setAttribute( ATT_SESSION_USER, user );
 			System.out.println("test requête");
 
-			String rights = user.getRights();
+			user=demo.chargerUser(user.getEmail());
+			String rights=user.getRights();
 			if (rights.equals(".")){
 				this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );
 			}
