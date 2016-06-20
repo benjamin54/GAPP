@@ -36,9 +36,9 @@
 		<li><a href="http://localhost:8080/GAPP/view/profilEtudiant.jsp">MON
 				PROFIL</a></li>
 		<li><a
-			href="http://localhost:8080/GAPP/view/EvaluationsEtudiants.jsp">GRILLE
+			href="/WEB-INF/view/EvaluationsEtudiants.jsp">GRILLE
 				DE COMPETENCES</a></li>
-		<li><form action="${pageContext.request.contextPath }/eleve" method="post">
+		<li><form action="${pageContext.request.contextPath }/eleve" method="get">
 				<input type="submit" name="groupe" value="MON GROUPE">
 			</form></li>
 
