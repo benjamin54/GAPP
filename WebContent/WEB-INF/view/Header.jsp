@@ -30,15 +30,30 @@
 		</div>
 	</nav>
 
-
-	<ul class="nav nav-pills nav-stacked">
-
-		<li><a href="/WEB-INF/view/ProfilTuteur.jsp">Accueil</a></li>
-		<li><a href="/WEB-INF/view/Agenda.jsp">Agenda</a></li>
-		<li><a href="/WEB-INF/view/Groupesencadres.jsp">Groupes
-				encadrés</a></li>
-		<li><a href="/WEB-INF/view/Evaluations.jsp">Grille de
-				compétences</a></li>
-	</ul>
+	
+		<div class="container">
+		<div class="row">
+			<form action="${pageContext.request.contextPath }/TuteurController"
+				method="get">
+				<div class="row">
+					<input class="col-lg-3" type="submit" name="mon profil"
+						value="MON_PROFIL" id="menu">
+				</div>
+				<div class="row">
+					<input class="col-lg-3" type="submit" name="agenda"
+						value="AGENDA"id="menu">
+				</div>
+				<div class="row">
+					<input class="col-lg-3" type="submit" name="groupe"
+						value="GROUPE" id="menu">
+				</div>
+				<div class="row">
+					<input class="col-lg-3" type="submit" name="evaluation"
+						value="EVALUATION"id="menu">
+				</div>
+			</form>
+		</div>
+		`
+	</div>
 </head>
 </html>

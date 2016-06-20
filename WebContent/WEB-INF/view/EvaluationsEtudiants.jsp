@@ -1,21 +1,24 @@
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html>
 
-  <title>Administrateur</title>
+<title>Grille de compétence</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet"> 
-<script src="ressources/js/jquery.js"></script> 
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet">
+<script src="ressources/js/jquery.js"></script>
 <body>
-<div class="container">
 
-<div class="row" style="padding-top:110Px;">
-  <div class="col-sm-4 col-md-4 col-lg-4">
-<%@include file="HeaderEleve.jsp" %> 
-</div>
+	<div class="container">
+		<h3>Fixed Navbar</h3>
+		<div class="row">
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<%@include file="HeaderEleve.jsp"%>
+			</div>
+			
 <div class="col-sm-8 col-md-8 col-lg-8">
        <div class="panel with-nav-tabs panel-success">
                 <div class="panel-heading clearfix">
@@ -2173,13 +2176,12 @@ javaScript:AJAX</li>
          </div>
     </div>
   </div>
-</div>
+
       <div class="row">
       <div class="col-sm-offset-6">
       <p>Ma note finale provisoire: </p>
                    </div>
                  </div>
-            </div>
        
  </body>
 </html>

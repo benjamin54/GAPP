@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 public class GroupeEleve extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static final String GROUPE = "/WEB-INF/view/Groupe.jsp";
+	public static final String ACCUEIL = "/WEB-INF/view/AccueilEtudiant.jsp";
+	public static final String MON_PROFIL = "/WEB-INF/view/profilEtudiant.jsp";
+	public static final String MA_GRILLE = "/WEB-INF/view/EvaluationsEtudiants.jsp";
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -26,7 +29,19 @@ public class GroupeEleve extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		this.getServletContext().getRequestDispatcher( GROUPE ).forward( request, response );
-	}
+		
 
+        if (request.getParameter("groupe") != null) {
+            request.getRequestDispatcher(GROUPE).forward(request, response);
+            	}
+        else if (request.getParameter("accueil") != null) {
+            request.getRequestDispatcher(ACCUEIL).forward(request, response);
+    	}
+        else if (request.getParameter("mon profil") != null) {
+            request.getRequestDispatcher(MON_PROFIL).forward(request, response);
+    	}
+        else if (request.getParameter("ma grille") != null) {
+            request.getRequestDispatcher(MA_GRILLE).forward(request, response);
+    	}
+	}
 }

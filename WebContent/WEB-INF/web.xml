@@ -21,11 +21,19 @@
     <servlet-name>GroupeEleve</servlet-name>
     <servlet-class>com.isep.controlleurs.GroupeEleve</servlet-class>
   </servlet>
-    <servlet-mapping>
+  <servlet-mapping>
     <servlet-name>GroupeEleve</servlet-name>
     <url-pattern>/groupeeleve</url-pattern>
   </servlet-mapping>
-  
+   <servlet>
+    <servlet-name>TuteurControlleur</servlet-name>
+    <servlet-class>com.isep.controlleurs.TuteurController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TuteurController</servlet-name>
+    <url-pattern>/tuteur</url-pattern>
+  </servlet-mapping>
+ 
   <servlet-mapping>
     <servlet-name>ConnexionController</servlet-name>
     <url-pattern>/connexion</url-pattern>
