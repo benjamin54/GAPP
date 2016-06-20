@@ -38,8 +38,8 @@
 		<li><a
 			href="http://localhost:8080/GAPP/view/EvaluationsEtudiants.jsp">GRILLE
 				DE COMPETENCES</a></li>
-		<li><form action="${pageContext.request.contextPath }/groupeeleve" method="get">
-				<input type="submit" value="MON GROUPE">
+		<li><form action="${pageContext.request.contextPath }/eleve" method="post">
+				<input type="submit" name="groupe" value="MON GROUPE">
 			</form></li>
 
 	</ul>

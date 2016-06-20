@@ -18,12 +18,12 @@
     <servlet-class>com.isepweb.controleur.ControleurProfiltuteur</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>GroupeEleve</servlet-name>
-    <servlet-class>com.isep.controlleurs.GroupeEleve</servlet-class>
+    <servlet-name>EleveControlleur</servlet-name>
+    <servlet-class>com.isep.controlleurs.EleveControlleur</servlet-class>
   </servlet>
     <servlet-mapping>
-    <servlet-name>GroupeEleve</servlet-name>
-    <url-pattern>/groupeeleve</url-pattern>
+    <servlet-name>EleveControlleur</servlet-name>
+    <url-pattern>/eleve</url-pattern>
   </servlet-mapping>
   
   <servlet-mapping>
