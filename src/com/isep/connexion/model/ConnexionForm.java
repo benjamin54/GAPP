@@ -12,11 +12,11 @@ public final class ConnexionForm {
     private static final String CHAMP_EMAIL ="email";
     private static final String CHAMP_PASS   = "password";
 
-    private String              resultat;
+    private String              resultatNegatif;
     private Map<String, String> erreurs      = new HashMap<String, String>();
 
     public String getResultat() {
-        return resultat;
+        return resultatNegatif;
     }
 
     public Map<String, String> getErreurs() {
@@ -46,12 +46,7 @@ public final class ConnexionForm {
         }
         user.setPassword(password);
 
-        /* Initialisation du résultat global de la validation. */
-        if ( erreurs.isEmpty() ) {
-            resultat = "Succès de la connexion.";
-        } else {
-            resultat = "Échec de la connexion.";
-        }
+        resultatNegatif = "Échec de la connexion.";
 
         return user;
     }

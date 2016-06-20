@@ -39,7 +39,7 @@
 					<div class="form-group">
 						<input type="submit" class="btn btn-block btn-lg btn-success"
 							value="login"><br>
-						<p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
+						<p class="erreur">${form.resultat}</p>
 
 						<p>${sessionScope.sessionUser.email}</p>
 						<!-- pour voir que la session est détruite -->

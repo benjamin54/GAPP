@@ -15,8 +15,91 @@ public class Users implements java.io.Serializable {
 	private String password;
 	private String email;
 	private String rights;
+	public Integer getIdUsers() {
+		return idUsers;
+	}
+
+	public void setIdUsers(Integer idUsers) {
+		this.idUsers = idUsers;
+	}
+
+	public Groupes getGroupes() {
+		return groupes;
+	}
+
+	public void setGroupes(Groupes groupes) {
+		this.groupes = groupes;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getRights() {
+		return rights;
+	}
+
+	public void setRights(String rights) {
+		this.rights = rights;
+	}
+
+	public Set getNoteses() {
+		return noteses;
+	}
+
+	public void setNoteses(Set noteses) {
+		this.noteses = noteses;
+	}
+
+	public Set getAbsenceses() {
+		return absenceses;
+	}
+
+	public void setAbsenceses(Set absenceses) {
+		this.absenceses = absenceses;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
 	private Set noteses = new HashSet(0);
 	private Set absenceses = new HashSet(0);
+	private String nom;
+	private String prenom;
+	
 
 	public Users() {
 	}
@@ -30,70 +113,10 @@ public class Users implements java.io.Serializable {
 		this.rights = rights;
 		this.noteses = noteses;
 		this.absenceses = absenceses;
+		this.nom = nom;
+		this.prenom = prenom;
 	}
 
-	public Integer getIdUsers() {
-		return this.idUsers;
-	}
-
-	public void setIdUsers(Integer idUsers) {
-		this.idUsers = idUsers;
-	}
-
-	public Groupes getGroupes() {
-		return this.groupes;
-	}
-
-	public void setGroupes(Groupes groupes) {
-		this.groupes = groupes;
-	}
-
-	public String getUsername() {
-		return this.username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return this.password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getEmail() {
-		return this.email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getRights() {
-		return this.rights;
-	}
-
-	public void setRights(String rights) {
-		this.rights = rights;
-	}
-
-	public Set getNoteses() {
-		return this.noteses;
-	}
-
-	public void setNoteses(Set noteses) {
-		this.noteses = noteses;
-	}
-
-	public Set getAbsenceses() {
-		return this.absenceses;
-	}
-
-	public void setAbsenceses(Set absenceses) {
-		this.absenceses = absenceses;
-	}
+	
 
 }
