@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 /* impact sur toutes les pages */
+
 body {
  background:#f5f5f5; /* fallback for old browsers */
 /*   background: -webkit-linear-gradient(right, #76b852, #8DC26F); */
@@ -430,3 +431,5 @@ div.zabuto_calendar div.legend span.badge {
 div.col{
 	pading-top:100px;
 }
+#menu{width:350px;
+height:40px;}

@@ -1,26 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
-<head>
-  <title>Profil étudiant</title>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet"> 
-<script src="ressources/js/jquery.js"></script> 
 
-</head>
+<title>Mon profil</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet">
+<script src="ressources/js/jquery.js"></script>
+<script type="text/javascript" src="coucou.js"></script>
 <body>
 
-<div class="container" >
-<div class="row" style="padding-top:110Px;">
-  <div class="col-md-3">
-<%@include file="HeaderEleve.jsp" %> </div>
-
-    <section class="col-md-3">
-        <h3>COURS</h3>
-        <script type="text/javascript">
+	<div class="container">
+		<h3>Fixed Navbar</h3>
+		<div class="row">
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<%@include file="HeaderEleve.jsp"%>
+			</div>
+			<div class="col-md-8">
+				<section class="col-md-4">
+					<h3>COURS</h3>
+					<script type="text/javascript">
         
         if (typeof jQuery == 'undefined') {
             throw new Error('jQuery is not loaded');
@@ -633,27 +635,27 @@
        
         
         </script>
-      <div id="my-calendar"></div>
-                </section>
-       
-       <section class="col-md-3">
-       <h3>TUTEUR</h3>
-    <p>
-    nom et prénom du tuteur:<br>
-    e-mail:<br>
-    remarques du tuteur:
-    
-    </p>
-    </section>
-     <section class="col-md-3">
-    <h3> ABSCENCES</h3>
-    
-    <p> Dates des abscences:</p>
-    
-    </section>
-</div>
- </div>
-      
-       <script type="text/javascript" src="coucou.js"></script> 
-  </body>
+					<div id="my-calendar"></div>
+				</section>
+
+				<section class="col-md-4">
+					<h3>TUTEUR</h3>
+					<p>
+						nom et prénom du tuteur:<br> e-mail:<br> remarques du
+						tuteur:
+
+					</p>
+				</section>
+				<section class="col-md-2">
+					<h3>ABSCENCES</h3>
+
+					<p>Dates des abscences:</p>
+
+				</section>
+			</div>
+		</div>
+		</div>
+
+		
+</body>
 </html>
