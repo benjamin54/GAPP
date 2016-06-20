@@ -25,11 +25,11 @@ public class ConnexionController extends HttpServlet {
 	public static final String ATT_USER = "user";
 	public static final String ATT_FORM = "form";
 	public static final String ATT_SESSION_USER = "sessionUser";
-	public static final String LOGIN = "/WEB-INF/view/connex.jsp";
-	public static final String ETUDIANT = "/WEB-INF/view/AccueilEtudiant.jsp";
-	public static final String TUTEUR = "/WEB-INF/view/ProfilTuteur.jsp";
-	public static final String ADMIN = "/WEB-INF/view/ProfilAdmin.jsp";
-	public static final String RESPO = "/WEB-INF/view/ProfilTuteur.jsp";
+
+	public static final String LOGIN = "/view/connex.jsp";
+	public static final String ETUDIANT = "/view/AccueilEtudiant.jsp";
+	public static final String TUTEUR = "/view/ProfilTuteur.jsp";
+	public static final String ADMIN = "/view/ProfilAdmin.jsp";
 
 
 	/**
@@ -66,17 +66,17 @@ public class ConnexionController extends HttpServlet {
 		if ( form.getErreurs().isEmpty() && user.getPassword().equals(demo.chargerMDP(user.getEmail()))) {
 			session.setAttribute( ATT_SESSION_USER, user );
 
-			this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );
-//			String rights = user.getRights();
-//			if (rights.equals(".")){
-//				this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );
-//			}
-//			else if (rights.equals("..")) {
-//				this.getServletContext().getRequestDispatcher( TUTEUR ).forward( request, response );
-//			} 
-//			else if (rights.equals("...")) {
-//				this.getServletContext().getRequestDispatcher( ADMIN ).forward( request, response );
-//			} 
+			user=demo.chargerUser(user.getEmail());
+			String rights=user.getRights();
+			if (rights.equals(".")){
+				this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );
+			}
+			else if (rights.equals("..")) {
+				this.getServletContext().getRequestDispatcher( TUTEUR ).forward( request, response );
+			} 
+			else if (rights.equals("...")) {
+				this.getServletContext().getRequestDispatcher( ADMIN ).forward( request, response );
+			} 
 			
 		} else {
 			session.setAttribute( ATT_SESSION_USER, null );
