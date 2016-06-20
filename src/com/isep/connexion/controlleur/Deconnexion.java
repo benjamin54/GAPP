@@ -17,8 +17,8 @@ public class Deconnexion extends HttpServlet {
 
     public void doPost( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 //         destruction de la session
-        HttpSession session1 = request.getSession();
-        session1.invalidate();
+        HttpSession session = request.getSession();
+        session.invalidate();
 
        // this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
         response.sendRedirect( request.getContextPath()+VUE );
