@@ -60,4 +60,10 @@ public class Competences implements java.io.Serializable {
 		this.noteses = noteses;
 	}
 
+	public void addCompetences(String famillecompetences2, String libelle2,
+			String noteses2) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
