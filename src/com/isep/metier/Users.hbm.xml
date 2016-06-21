@@ -9,7 +9,7 @@
             <generator class="identity" />
         </id>
         <many-to-one name="groupes" class="com.isep.metier.Groupes" fetch="select">
-            <column name="Groupes_NumGroupe" />
+            <column name="Groupes_idGroupes" />
         </many-to-one>
         <property name="username" type="string">
             <column name="Username" length="45" />
