@@ -36,7 +36,7 @@
 			<form action="${pageContext.request.contextPath }/TuteurController"
 				method="get">
 				<div class="row">
-					<input class="col-lg-3" type="submit" name="mon profil"
+					<input class="col-lg-3" type="submit" name="monprofil"
 						value="MON_PROFIL" id="menu">
 				</div>
 				<div class="row">

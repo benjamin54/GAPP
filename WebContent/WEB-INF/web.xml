@@ -27,10 +27,10 @@
   </servlet-mapping>
    <servlet>
     <servlet-name>TuteurControlleur</servlet-name>
-    <servlet-class>com.isep.controlleurs.TuteurController</servlet-class>
+    <servlet-class>com.isep.controlleurs.TuteurControlleur</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>TuteurController</servlet-name>
+    <servlet-name>TuteurControlleur</servlet-name>
     <url-pattern>/tuteur</url-pattern>
   </servlet-mapping>
  

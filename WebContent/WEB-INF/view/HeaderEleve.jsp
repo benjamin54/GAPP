@@ -46,11 +46,11 @@
 						value="MON GROUPE"id="menu">
 				</div>
 				<div class="row">
-					<input class="col-lg-3" type="submit" name="mon profil"
+					<input class="col-lg-3" type="submit" name="monprofil"
 						value="MON PROFIL" id="menu">
 				</div>
 				<div class="row">
-					<input class="col-lg-3" type="submit" name="ma grille"
+					<input class="col-lg-3" type="submit" name="magrille"
 						value="MA GRILLE"id="menu">
 				</div>
 			</form>
