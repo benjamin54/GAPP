@@ -10,7 +10,7 @@
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="ressources/js/jquery.js"></script>
-
+<script type="text/javascript" src="scriptrecherche.js"></script>
 <body>
 	<div class="container">
 		<h3>Fixed Navbar</h3>
@@ -28,18 +28,43 @@
 
 
 						<div>
-							<ul class="nav navbar-nav">
-								<li><a href="RechercheEleve.jsp"> Recherche d'élève</a></li>
 
+							<!-- 							<form name="Recherche"
+								onSubmit="return Rechercher(this.mot.value);">
+								<input name="mot" type="text" size=20 onChange="n = 0;">
+								<input type="submit" value="Rechercher">
+							</form> -->
+							<ul class="nav navbar-nav">
+								<li class="nav navbar-nav"><a href="#"> Recherche
+										d'élève</a></li>
 							</ul>
-							<form class="navbar-form navbar-left">
+
+							<form id="auto-suggest" name="Recherche"
+								class="navbar-form navbar-left" action="#" method="post">
 								<div class="form-group">
-									<input type="text" class="form-control">
+									<input class="form-control" type="text" class="search"
+										name="search" value="Rechercher"
+										onfocus="if(this.value=='Rechercher')this.value=''"
+										autocomplete="off" />
+									<ul class="suggestions">
+									</ul>
+									<button type="submit" class="btn btn-default">
+										<i class="icon icon-search">Rechercher</i>
+									</button>
 								</div>
-								<button type="submit" class="btn btn-default">
-									<i class="icon icon-search">envoyer</i>
-								</button>
 							</form>
+
+							<!-- 							<form name="Recherche" class="navbar-form navbar-left"
+								onSubmit="return Rechercher(this.mot.value);">
+								<div class="form-group">
+									<input name="mot" class="form-control" id="autocomplete"
+										type="text" size=20 onChange="n = 0;">
+									<button type="submit" class="btn btn-default">
+										<i class="icon icon-search">Rechercher</i>
+									</button>
+								</div>
+
+							</form> -->
 
 						</div>
 					</div>
