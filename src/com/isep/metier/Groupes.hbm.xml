@@ -8,11 +8,8 @@
             <column name="idGroupes" />
             <generator class="identity" />
         </id>
-        <property name="numGroupe" type="java.lang.Integer">
-            <column name="NumGroupe" />
-        </property>
-        <property name="groupescol" type="string">
-            <column name="Groupescol" length="45" />
+        <property name="emailtuteur" type="string">
+        	<column name="Email_Tuteur" not-null="true" length="45"></column>
         </property>
         <set name="assignementses" table="assignements_has_groupes" inverse="false" lazy="true" fetch="select">
             <key>
@@ -24,7 +21,7 @@
         </set>
         <set name="userses" table="users" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="Groupes_NumGroupe" />
+                <column name="Groupes_idGroupes" />
             </key>
             <one-to-many class="com.isep.metier.Users" />
         </set>

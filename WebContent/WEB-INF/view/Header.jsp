@@ -20,25 +20,12 @@
 		<div class="container">
 		<div class="col-lg-8">
 			<ul class="nav navbar-nav">
-<<<<<<< HEAD
 				<li class="navbar-text"><p>${sessionScope.sessionUser.prenom}
 						${sessionScope.sessionUser.nom}</p></li>
 			</ul>
 			<form class="form-inline pull-xs-right" action="${pageContext.request.contextPath }/deconnexion" method="post">
 				<input type="submit"
 					class="btn btn-default navbar-btn navbar-right" value="Déconnexion" >
-=======
-				<li class="navbar-text">Vous êtes connecté(e) avec l'adresse
-					${sessionScope.sessionUser.email}</li>
-			</ul>
-			</div>
-			<div class="col-lg-4">
-			<form class="form-inline pull-xs-right"
-				action="${pageContext.request.contextPath }/deconnexion"
-				method="post">
-				<input type="submit" class="btn btn-default navbar-btn navbar-right"
-					value="Déconnexion">
->>>>>>> origin/Yannis
 			</form>
 			</div>
 		</div>

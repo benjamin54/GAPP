@@ -19,6 +19,8 @@ public class Demo {
 	public static void main(String[] args){
 		Demo D = new Demo();
 		//Users u = new Users(null,"ggdinard","123","email5@email.com",".",null,null,"gégé","dinard");
+		Users u=D.chargerUser("email2@email.com");
+		D.updateUserGroupe(u,1);
 
 		
 	}
@@ -71,15 +73,39 @@ public class Demo {
 		   
 	}
 	
-	public void updateUser(Integer idUser, String column, String value){
+	public void updateUserEmail(Users user, String Email){
 	      Session session = HibernateUtil.getSessionFactory().openSession();
 	      Transaction tx = null;
+	      int id = user.getIdUsers();
 	      try{
 	         tx = session.beginTransaction();
-	         Users user = 
-	                    (Users)session.get(Users.class, idUser); 
-	         
-			 session.update(user); 
+	         user = 
+	                    (Users)session.get(Users.class, id);
+
+	         user.setEmail(Email);
+			 session.update(user);  
+	         tx.commit();
+	      }catch (HibernateException e) {
+	         if (tx!=null) tx.rollback();
+	         e.printStackTrace(); 
+	      }finally {
+	         session.close(); 
+	      }
+	   }
+	
+	
+	public void updateUserGroupe(Users user, int GroupNum){
+	      Session session = HibernateUtil.getSessionFactory().openSession();
+	      Transaction tx = null;
+	      int id = user.getIdUsers();
+	      try{
+	         tx = session.beginTransaction();
+	         user = 
+	                    (Users)session.get(Users.class, id);
+	         GroupesUtil G = new GroupesUtil();
+	         Groupes grp = G.GroupById(id);
+	         user.setGroupes(grp);
+			 session.update(user);  
 	         tx.commit();
 	      }catch (HibernateException e) {
 	         if (tx!=null) tx.rollback();

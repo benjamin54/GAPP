@@ -10,8 +10,8 @@ import java.util.Set;
 public class Groupes implements java.io.Serializable {
 
 	private Integer idGroupes;
-	private Integer numGroupe;
-	private String groupescol;
+    private String emailtuteur;
+
 	private Set assignementses = new HashSet(0);
 	private Set userses = new HashSet(0);
 	private Set remarqueses = new HashSet(0);
@@ -19,12 +19,20 @@ public class Groupes implements java.io.Serializable {
 	public Groupes() {
 	}
 
-	public Groupes(Integer numGroupe, String groupescol, Set assignementses, Set userses, Set remarqueses) {
-		this.numGroupe = numGroupe;
-		this.groupescol = groupescol;
+	public Groupes(int idGroupes,String emailtuteur, Set assignementses, Set userses, Set remarqueses) {
+		this.idGroupes=idGroupes;
+		this.emailtuteur=emailtuteur;
 		this.assignementses = assignementses;
 		this.userses = userses;
 		this.remarqueses = remarqueses;
+	}
+
+	public String getEmailtuteur() {
+		return emailtuteur;
+	}
+
+	public void setEmailtuteur(String emailtuteur) {
+		this.emailtuteur = emailtuteur;
 	}
 
 	public Integer getIdGroupes() {
@@ -35,21 +43,6 @@ public class Groupes implements java.io.Serializable {
 		this.idGroupes = idGroupes;
 	}
 
-	public Integer getNumGroupe() {
-		return this.numGroupe;
-	}
-
-	public void setNumGroupe(Integer numGroupe) {
-		this.numGroupe = numGroupe;
-	}
-
-	public String getGroupescol() {
-		return this.groupescol;
-	}
-
-	public void setGroupescol(String groupescol) {
-		this.groupescol = groupescol;
-	}
 
 	public Set getAssignementses() {
 		return this.assignementses;
