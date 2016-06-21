@@ -20,22 +20,6 @@ public class Users implements java.io.Serializable {
 	private String prenom;
 	private String nom;
 
-	public String getPrenom() {
-		return prenom;
-	}
-
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
-
-	public String getNom() {
-		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
 	public Users() {
 	}
 
@@ -114,5 +98,20 @@ public class Users implements java.io.Serializable {
 
 	public void setAbsenceses(Set absenceses) {
 		this.absenceses = absenceses;
+	}
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 }
