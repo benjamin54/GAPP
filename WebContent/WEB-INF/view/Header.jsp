@@ -33,7 +33,7 @@
 
 	<div class="container">
 		<div class="row">
-			<form action="${pageContext.request.contextPath }/TuteurController"
+			<form action="${pageContext.request.contextPath }/tuteur"
 				method="get">
 				<div class="row">
 					<input class="col-lg-3" type="submit" name="monprofil"

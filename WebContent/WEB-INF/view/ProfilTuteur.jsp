@@ -10,7 +10,7 @@
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="ressources/js/jquery.js"></script>
-<script type="text/javascript" src="scriptrecherche.js"></script>
+<script type="text/javascript" src="ressources/js/scriptrecherche.js"></script>
 <body>
 	<div class="container">
 		<h3>Fixed Navbar</h3>
@@ -48,9 +48,9 @@
 										autocomplete="off" />
 									<ul class="suggestions">
 									</ul>
-									<button type="submit" class="btn btn-default">
+<!-- 									<button type="submit" class="btn btn-default">
 										<i class="icon icon-search">Rechercher</i>
-									</button>
+									</button> -->
 								</div>
 							</form>
 
