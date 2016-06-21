@@ -16,7 +16,7 @@
 <nav class="navbar navbar-dark bg-success navbar-fixed-top" style=" padding-top:20px;">
 <div class="container">
  <ul class="nav navbar-nav">
-  <li class="navbar-text">NOM et Prenom</li>
+  <li class="navbar-text"><p>${sessionScope.sessionUser.prenom} ${sessionScope.sessionUser.nom}</p> </li>
   </ul>
    <form class="form-inline pull-xs-right">
    <button type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>

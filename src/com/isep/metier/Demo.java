@@ -18,24 +18,15 @@ import org.hibernate.Transaction;
 public class Demo {
 	public static void main(String[] args){
 		Demo D = new Demo();
-
-		System.out.println(D.chargerUser("email@email.com").getRights());
-	}
-
-	public void create() {
-		Session session = HibernateUtil.getSessionFactory().openSession();
-		Transaction tx=  session.beginTransaction();
-		Users user = new Users(); 
-		user.setPassword("bob52");
-		user.setUsername("test25");
-		user.setRights("admin");
-		user.setAbsenceses(null);
-		user.setGroupes(null);
-		user.setEmail("email2@email.com");
-		int idUsers = (int)session.save(user);
-		System.out.println("clé primaire"+idUsers);
+		//Users u = new Users(null,"ggdinard","123","email5@email.com",".",null,null,"gégé","dinard");
 
 		
+	}
+
+	public void create(Users user) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction tx=  session.beginTransaction();
+		int idUsers = (int)session.save(user);
 		tx.commit();
 		session.close();
 	}

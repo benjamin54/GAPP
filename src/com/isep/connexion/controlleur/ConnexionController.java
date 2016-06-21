@@ -26,10 +26,10 @@ public class ConnexionController extends HttpServlet {
 	public static final String ATT_FORM = "form";
 	public static final String ATT_SESSION_USER = "sessionUser";
 
-	public static final String LOGIN = "/view/connex.jsp";
-	public static final String ETUDIANT = "/view/AccueilEtudiant.jsp";
-	public static final String TUTEUR = "/view/ProfilTuteur.jsp";
-	public static final String ADMIN = "/view/ProfilAdmin.jsp";
+	public static final String LOGIN = "/WEB-INF/view/connex.jsp";
+	public static final String ETUDIANT = "/WEB-INF/view/AccueilEtudiant.jsp";
+	public static final String TUTEUR = "/WEB-INF/view/ProfilTuteur.jsp";
+	public static final String ADMIN = "/WEB-INF/view/ProfilAdmin.jsp";
 
 
 	/**
@@ -64,9 +64,10 @@ public class ConnexionController extends HttpServlet {
 		request.setAttribute( ATT_USER, user );
 
 		if ( form.getErreurs().isEmpty() && user.getPassword().equals(demo.chargerMDP(user.getEmail()))) {
-			session.setAttribute( ATT_SESSION_USER, user );
+
 
 			user=demo.chargerUser(user.getEmail());
+			session.setAttribute( ATT_SESSION_USER, user );
 			String rights=user.getRights();
 			if (rights.equals(".")){
 				this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );
