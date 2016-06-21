@@ -64,9 +64,10 @@ public class ConnexionController extends HttpServlet {
 		request.setAttribute( ATT_USER, user );
 
 		if ( form.getErreurs().isEmpty() && user.getPassword().equals(demo.chargerMDP(user.getEmail()))) {
-			session.setAttribute( ATT_SESSION_USER, user );
+
 
 			user=demo.chargerUser(user.getEmail());
+			session.setAttribute( ATT_SESSION_USER, user );
 			String rights=user.getRights();
 			if (rights.equals(".")){
 				this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );

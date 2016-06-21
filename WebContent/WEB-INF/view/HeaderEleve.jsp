@@ -19,8 +19,7 @@
 		<div class="container">
 		<div class="col-lg-8">
 			<ul class="nav navbar-nav">
-				<li class="navbar-text">Vous êtes connecté(e) avec l'adresse
-					${sessionScope.sessionUser.email}</li>
+				<li class="navbar-text"><p>${sessionScope.sessionUser.prenom} ${sessionScope.sessionUser.nom}</p> </li>
 			</ul>
 			</div>
 			<div class="col-lg-4">

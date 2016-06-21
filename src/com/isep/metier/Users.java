@@ -15,6 +15,43 @@ public class Users implements java.io.Serializable {
 	private String password;
 	private String email;
 	private String rights;
+	private Set noteses = new HashSet(0);
+	private Set absenceses = new HashSet(0);
+	private String prenom;
+	private String nom;
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public Users() {
+	}
+
+	public Users(Groupes groupes, String username, String password, String email, String rights, Set noteses,
+			Set absenceses, String nom, String prenom) {
+		this.groupes = groupes;
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.rights = rights;
+		this.noteses = noteses;
+		this.absenceses = absenceses;
+		this.nom=nom;
+		this.prenom=prenom;
+	}
+
 	public Integer getIdUsers() {
 		return idUsers;
 	}
@@ -78,45 +115,4 @@ public class Users implements java.io.Serializable {
 	public void setAbsenceses(Set absenceses) {
 		this.absenceses = absenceses;
 	}
-
-	public String getNom() {
-		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-	public String getPrenom() {
-		return prenom;
-	}
-
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
-
-	private Set noteses = new HashSet(0);
-	private Set absenceses = new HashSet(0);
-	private String nom;
-	private String prenom;
-	
-
-	public Users() {
-	}
-
-	public Users(Groupes groupes, String username, String password, String email, String rights, Set noteses,
-			Set absenceses) {
-		this.groupes = groupes;
-		this.username = username;
-		this.password = password;
-		this.email = email;
-		this.rights = rights;
-		this.noteses = noteses;
-		this.absenceses = absenceses;
-		this.nom = nom;
-		this.prenom = prenom;
-	}
-
-	
-
 }

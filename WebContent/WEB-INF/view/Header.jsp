@@ -19,7 +19,8 @@
 		style="padding-top: 20px;">
 		<div class="container">
 			<ul class="nav navbar-nav">
-				<li class="navbar-text">NOM et Prenom</li>
+				<li class="navbar-text"><p>${sessionScope.sessionUser.prenom}
+						${sessionScope.sessionUser.nom}</p></li>
 			</ul>
 			<form class="form-inline pull-xs-right"
 				action="${pageContext.request.contextPath }/deconnexion"
@@ -30,8 +31,8 @@
 		</div>
 	</nav>
 
-	
-		<div class="container">
+
+	<div class="container">
 		<div class="row">
 			<form action="${pageContext.request.contextPath }/TuteurController"
 				method="get">
@@ -40,16 +41,16 @@
 						value="MON_PROFIL" id="menu">
 				</div>
 				<div class="row">
-					<input class="col-lg-3" type="submit" name="agenda"
-						value="AGENDA"id="menu">
+					<input class="col-lg-3" type="submit" name="agenda" value="AGENDA"
+						id="menu">
 				</div>
 				<div class="row">
-					<input class="col-lg-3" type="submit" name="groupe"
-						value="GROUPE" id="menu">
+					<input class="col-lg-3" type="submit" name="groupe" value="GROUPE"
+						id="menu">
 				</div>
 				<div class="row">
 					<input class="col-lg-3" type="submit" name="evaluation"
-						value="EVALUATION"id="menu">
+						value="EVALUATION" id="menu">
 				</div>
 			</form>
 		</div>
