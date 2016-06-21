@@ -24,15 +24,29 @@
  </div>
 </nav>
 
- 
-     <ul class="nav nav-pills nav-stacked">
-      
-      	<li><a href="http://localhost:8080/GAPP/profiltuteur.jsp">Accueil</a></li>
-      	<li><a href="http://localhost:8080/GAPP/view/Agenda.jsp">Agenda</a></li>
-        <li><a href="http://localhost:8080/GAPP/view/Groupesencadres.jsp">Groupes encadrés</a></li>
-        <li><a href="http://localhost:8080/GAPP/view/Evaluations.jsp">Grille de compétences</a></li>
-      </ul>
-
-
+		<div class="container">
+		<div class="row">
+			<form action="${pageContext.request.contextPath }/TuteurController"
+				method="get">
+				<div class="row">
+					<input class="col-lg-3" type="submit" name="monprofil"
+						value="MON_PROFIL" id="menu">
+				</div>
+				<div class="row">
+					<input class="col-lg-3" type="submit" name="agenda"
+						value="AGENDA"id="menu">
+				</div>
+				<div class="row">
+					<input class="col-lg-3" type="submit" name="groupe"
+						value="GROUPE" id="menu">
+				</div>
+				<div class="row">
+					<input class="col-lg-3" type="submit" name="evaluation"
+						value="EVALUATION"id="menu">
+				</div>
+			</form>
+		</div>
+		`
+	</div>
 </head>
 </html>

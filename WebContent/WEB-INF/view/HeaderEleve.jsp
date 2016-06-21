@@ -25,12 +25,29 @@
 			</form>
 		</div>
 	</nav>
-	
-	<ul class="nav nav-pills nav-stacked">
-		<li><a href="http://localhost:8080/GAPP/*.php">ACCUEIL</a></li>
-		<li><a href="http://localhost:8080/GAPP/view/profilEtudiant.jsp">MON PROFIL</a></li>
-		<li><a href="http://localhost:8080/GAPP/view/EvaluationsEtudiants.jsp">GRILLE DE COMPETENCES</a></li>
-		<li><a href="http://localhost:8080/GAPP/view/Groupe.jsp">MON GROUPE</a></li>
-	</ul>
+	<div class="container">
+		<div class="row">
+			<form action="${pageContext.request.contextPath }/groupeeleve"
+				method="get">
+				<div class="row">
+					<input class="col-lg-3" type="submit" name="accueil"
+						value="ACCUEIL" id="menu">
+				</div>
+				<div class="row">
+					<input class="col-lg-3" type="submit" name="groupe"
+						value="MON GROUPE"id="menu">
+				</div>
+				<div class="row">
+					<input class="col-lg-3" type="submit" name="monprofil"
+						value="MON PROFIL" id="menu">
+				</div>
+				<div class="row">
+					<input class="col-lg-3" type="submit" name="magrille"
+						value="MA GRILLE"id="menu">
+				</div>
+			</form>
+		</div>
+		`
+	</div>
 </head>
 </html>

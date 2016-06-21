@@ -10,17 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class GroupeEleve
  */
-public class GroupeEleve extends HttpServlet {
+public class TuteurControlleur extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	public static final String GROUPE = "/WEB-INF/view/Groupe.jsp";
-	public static final String ACCUEIL = "/WEB-INF/view/AccueilEtudiant.jsp";
-	public static final String MON_PROFIL = "/WEB-INF/view/profilEtudiant.jsp";
-	public static final String MA_GRILLE = "/WEB-INF/view/EvaluationsEtudiants.jsp";
+	private static final String GROUPE = "/WEB-INF/view/Groupesencadres.jsp";
+	private static final String EVALUATION = "/WEB-INF/view/Evaluations.jsp";
+	private static final String MON_PROFIL = "/WEB-INF/view/ProfilTuteur.jsp";
+	private static final String AGENDA = "/WEB-INF/view/Agenda.jsp";
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public GroupeEleve() {
+    public TuteurControlleur() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,14 +31,14 @@ public class GroupeEleve extends HttpServlet {
         if (request.getParameter("groupe") != null) {
             request.getRequestDispatcher(GROUPE).forward(request, response);
             	}
-        else if (request.getParameter("accueil") != null) {
-            request.getRequestDispatcher(ACCUEIL).forward(request, response);
+        else if (request.getParameter("evaluation") != null) {
+            request.getRequestDispatcher(EVALUATION).forward(request, response);
     	}
         else if (request.getParameter("monprofil") != null) {
             request.getRequestDispatcher(MON_PROFIL).forward(request, response);
     	}
-        else if (request.getParameter("magrille") != null) {
-            request.getRequestDispatcher(MA_GRILLE).forward(request, response);
+        else if (request.getParameter("agenda") != null) {
+            request.getRequestDispatcher(AGENDA).forward(request, response);
     	}
 	}
 }
