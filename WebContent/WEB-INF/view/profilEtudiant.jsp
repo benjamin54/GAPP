@@ -634,6 +634,7 @@
            });
        
         
+<<<<<<< HEAD
         </script>
 					<div id="my-calendar"></div>
 				</section>
