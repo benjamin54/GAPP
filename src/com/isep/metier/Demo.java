@@ -17,10 +17,13 @@ import org.hibernate.Transaction;
 
 public class Demo {
 	public static void main(String[] args){
-		Demo D = new Demo();
+		
 		//Users u = new Users(null,"ggdinard","123","email5@email.com",".",null,null,"gégé","dinard");
-		Users u=D.chargerUser("email2@email.com");
-		D.updateUserGroupe(u,1);
+		RemarquesUtil R = new RemarquesUtil();
+		Groupes grp = new Groupes();
+		GroupesUtil G = new GroupesUtil();
+		grp=G.GroupById(1);
+		System.out.println(R.chargerRemarquesByGroupe(grp).get(0).getRemarque());
 
 		
 	}
