@@ -37,7 +37,7 @@
 				method="get">
 				<div class="row">
 					<input class="col-lg-3" type="submit" name="monprofil"
-						value="MON_PROFIL" id="menu">
+						value="MON PROFIL" id="menu">
 				</div>
 				<div class="row">
 					<input class="col-lg-3" type="submit" name="agenda" value="AGENDA"
