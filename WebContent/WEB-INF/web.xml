@@ -13,10 +13,10 @@
     <servlet-name>user</servlet-name>
     <servlet-class>com.isepweb.controleur.ControleurProfilEtudiant</servlet-class>
   </servlet>
-  <servlet>
-    <servlet-name>Tuteur</servlet-name>
-    <servlet-class>com.isepweb.controleur.ControleurProfiltuteur</servlet-class>
-  </servlet>
+<!--   <servlet> -->
+<!--     <servlet-name>Tuteur</servlet-name> -->
+<!--     <servlet-class>com.isepweb.controleur.ControleurProfiltuteur</servlet-class> -->
+<!--   </servlet> -->
   <servlet>
     <servlet-name>GroupeEleve</servlet-name>
     <servlet-class>com.isep.controlleurs.GroupeEleve</servlet-class>
@@ -46,8 +46,8 @@
     <servlet-name>user</servlet-name>
     <url-pattern>*.php</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Tuteur</servlet-name>
-    <url-pattern>/ProfilTuteur</url-pattern>
-  </servlet-mapping>
+<!--   <servlet-mapping> -->
+<!--     <servlet-name>Tuteur</servlet-name> -->
+<!--     <url-pattern>/ProfilTuteur</url-pattern> -->
+<!--   </servlet-mapping> -->
 </web-app>
