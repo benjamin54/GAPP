@@ -2,9 +2,11 @@ package com.isep.metier;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -13,9 +15,67 @@ import org.hibernate.Transaction;
 public class GroupesUtil {
 	public static void main(String[] args){
 		GroupesUtil g = new GroupesUtil();
-		System.out.println(g.readGroupes());	
-	}
+		Demo d = new Demo();
+		Users user = d.chargerUser("email5@email.com");
+		Users user2 = d.chargerUser("email6@email.com");
+		Set<Users> userses = new HashSet<Users>();
+		userses.add(user);
+		userses.add(user2);
+		Groupes grp = new Groupes();
+		grp=g.GroupByNum(3);
+		g.deleteGrp(grp);
+		
+
 	
+	}
+public Groupes GroupByNum(int num){
+	Session session = HibernateUtil.getSessionFactory().openSession();
+	Transaction tx = null;
+	
+	try{
+	   tx = session.beginTransaction();
+	   Groupes group =(Groupes) session.createQuery("FROM Groupes WHERE NumGroupe="+"'"+num+"'").uniqueResult(); 
+	   ArrayList<Users> userGrp=(ArrayList<Users>)session.createQuery("FROM Users WHERE Groupes_NumGroupes="+"'"+num+"'").list();
+	   Set<Users> usersSet= new HashSet<Users>();
+	   for(int i=0; i<userGrp.size();i++){
+		   usersSet.add(userGrp.get(i));
+	   }
+	   group.setUserses(usersSet);
+	   return group;
+	}catch (HibernateException e) {
+	   if (tx!=null) tx.rollback();
+	   e.printStackTrace(); 
+	   return null;
+	}finally {
+	   session.close(); 
+	}
+}
+
+public void CreerGroupe (Groupes grp){
+	
+	Session session = HibernateUtil.getSessionFactory().openSession();
+	Transaction tx=  session.beginTransaction();
+	int idGrp = (int)session.save(grp);
+	tx.commit();
+	session.close();
+}
+
+public void deleteGrp(Groupes group){
+	Session session = HibernateUtil.getSessionFactory().openSession();
+    Transaction tx = null;
+    try{
+       tx = session.beginTransaction();
+
+       session.delete(group); 
+       tx.commit();
+    }catch (HibernateException e) {
+       if (tx!=null) tx.rollback();
+       e.printStackTrace(); 
+    }finally {
+       session.close(); 
+    }
+ 
+}
 	
 public ArrayList<Groupes> readGroupes(){
 	Session session = HibernateUtil.getSessionFactory().openSession();
@@ -34,4 +94,6 @@ public ArrayList<Groupes> readGroupes(){
 	}
 	
 	}
+
+
 }
