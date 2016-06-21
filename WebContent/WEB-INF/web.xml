@@ -2,21 +2,23 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:web="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-	<display-name>GAPP</display-name>
-	<servlet>
-		<servlet-name>ConnexionController</servlet-name>
-		<servlet-class>com.isep.connexion.controlleur.ConnexionController</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Deconnexion</servlet-name>
-		<servlet-class>com.isep.connexion.controlleur.Deconnexion</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>GestionJDBC</servlet-name>
-		<servlet-class>com.isep.bdd.controlleur.GestionJDBC</servlet-class>
-	</servlet>
+	<display-name>GAPP[GAPP michele4]</display-name>
+	<welcome-file-list>
+	<welcome-file>profilEtudiant.jsp</welcome-file>
+	</welcome-file-list>
+	
+	
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>ConnexionController</servlet-name> -->
+<!-- 		<servlet-class>com.isep.connexion.controlleur.ConnexionController</servlet-class> -->
+<!-- 	</servlet> -->
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>Deconnexion</servlet-name> -->
+<!-- 		<servlet-class>com.isep.connexion.controlleur.Deconnexion</servlet-class> -->
+<!-- 	</servlet> -->
 	
 	<servlet>
+	
 		<servlet-name>user</servlet-name>
 		<servlet-class>com.isepweb.controleur.ControleurProfilEtudiant</servlet-class>
 	</servlet>
@@ -26,20 +28,16 @@
 		<servlet-class>com.isepweb.controleur.ControleurProfiltuteur</servlet-class>
 	</servlet>
 	
-	<servlet-mapping>
-		<servlet-name>GestionJDBC</servlet-name>
-		<url-pattern>/jdbc</url-pattern>
-	</servlet-mapping>
 	
-	<servlet-mapping>
-		<servlet-name>ConnexionController</servlet-name>
-		<url-pattern>/connexion</url-pattern>
-	</servlet-mapping>
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>ConnexionController</servlet-name> -->
+<!-- 		<url-pattern>/connexion</url-pattern> -->
+<!-- 	</servlet-mapping> -->
 	
-	<servlet-mapping>
-		<servlet-name>Deconnexion</servlet-name>
-		<url-pattern>/deconnexion</url-pattern>
-	</servlet-mapping>
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>Deconnexion</servlet-name> -->
+<!-- 		<url-pattern>/deconnexion</url-pattern> -->
+<!-- 	</servlet-mapping> -->
 
 <servlet-mapping>
 		<servlet-name>user</servlet-name>
@@ -50,4 +48,5 @@
 		<servlet-name>Tuteur</servlet-name>
 		<url-pattern>/ProfilTuteur</url-pattern>
 	</servlet-mapping>
+  
 </web-app>

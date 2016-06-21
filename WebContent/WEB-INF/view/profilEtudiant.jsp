@@ -12,7 +12,7 @@
 
 </head>
 <body>
-
+<form action="ControleurProfilEtudiant">
 <div class="container" >
 <div class="row" style="padding-top:110Px;">
   <div class="col-md-3">
@@ -655,5 +655,6 @@
  </div>
       
        <script type="text/javascript" src="coucou.js"></script> 
+       </form>
   </body>
 </html>
