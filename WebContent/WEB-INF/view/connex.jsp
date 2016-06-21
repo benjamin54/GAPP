@@ -50,7 +50,7 @@
 				</form>
 				<div class="modal-footer">
 					<div class="col-md-12">
-						<button class="btn btn-success">cancel</button>
+	
 					</div>
 				</div>
 			</div>

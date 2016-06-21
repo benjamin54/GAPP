@@ -17,7 +17,7 @@
 		style="padding-top: 20px;">
 		<div class="container">
 			<ul class="nav navbar-nav">
-				<li class="navbar-text">Vous êtes connecté(e) avec l'adresse ${sessionScope.sessionUser.username}</li>
+				<li class="navbar-text"><p>${sessionScope.sessionUser.prenom} ${sessionScope.sessionUser.nom} </p></li>
 			</ul>
 			<form class="form-inline pull-xs-right" action="${pageContext.request.contextPath }/deconnexion" method="post">
 				<input type="submit"
