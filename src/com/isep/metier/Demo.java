@@ -27,10 +27,19 @@ public class Demo {
 
 	public void create(Users user) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
-		Transaction tx=  session.beginTransaction();
+		Transaction tx = null;
+		try{
+		tx=  session.beginTransaction();
 		int idUsers = (int)session.save(user);
 		tx.commit();
+		}
+		catch(HibernateException e){
+			 if (tx!=null) tx.rollback();
+			 e.printStackTrace();
+		}
+		finally{
 		session.close();
+		}
 	}
 	public void readUsers(){
 		      Session session = HibernateUtil.getSessionFactory().openSession();
@@ -88,11 +97,56 @@ public class Demo {
 	      }catch (HibernateException e) {
 	         if (tx!=null) tx.rollback();
 	         e.printStackTrace(); 
+	         System.out.println("Erreur fonction UpdateUserEmail()");
 	      }finally {
 	         session.close(); 
 	      }
 	   }
 	
+	public void updateUserMdp(Users user, String mdp){
+	      Session session = HibernateUtil.getSessionFactory().openSession();
+	      Transaction tx = null;
+	      int id = user.getIdUsers();
+	      try{
+	         tx = session.beginTransaction();
+	         user = 
+	                    (Users)session.get(Users.class, id);
+
+	         user.setPassword(mdp);
+			 session.update(user);  
+	         tx.commit();
+	      }catch (HibernateException e) {
+	         if (tx!=null) tx.rollback();
+	         e.printStackTrace(); 
+	         System.out.println("Erreur fonction UpdateUserMdp()");
+	      }finally {
+	         session.close(); 
+	      }
+	   }
+	
+	public void updateUserNomPrenom(Users user, String Nom, String Prenom){
+	      Session session = HibernateUtil.getSessionFactory().openSession();
+	      Transaction tx = null;
+	      int id = user.getIdUsers();
+	      try{
+	         tx = session.beginTransaction();
+	         user = 
+	                    (Users)session.get(Users.class, id);
+	         if(Nom!=null){
+	        	 user.setNom(Nom);
+	         }else if(Prenom!=null){
+	        	 user.setPrenom(Prenom);
+	         }
+			 session.update(user);  
+	         tx.commit();
+	      }catch (HibernateException e) {
+	         if (tx!=null) tx.rollback();
+	         e.printStackTrace(); 
+	         System.out.println("Erreur fonction updateUserNomPrenom()");
+	      }finally {
+	         session.close(); 
+	      }
+	   }
 	
 	public void updateUserGroupe(Users user, int GroupNum){
 	      Session session = HibernateUtil.getSessionFactory().openSession();
@@ -103,13 +157,14 @@ public class Demo {
 	         user = 
 	                    (Users)session.get(Users.class, id);
 	         GroupesUtil G = new GroupesUtil();
-	         Groupes grp = G.GroupById(id);
+	         Groupes grp = G.GroupById(GroupNum);
 	         user.setGroupes(grp);
 			 session.update(user);  
 	         tx.commit();
 	      }catch (HibernateException e) {
 	         if (tx!=null) tx.rollback();
 	         e.printStackTrace(); 
+	         System.out.println("Erreur dans la fonction updateUserGroupe");
 	      }finally {
 	         session.close(); 
 	      }
