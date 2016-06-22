@@ -436,7 +436,7 @@ height:40px;}
 
 
 /* style barre recherche */
-html, body {background:url(ressources/images/noise.png) left top repeat}
+/* html, body {background:url(ressources/images/noise.png) left top repeat} */
 #auto-suggest {width:358px;margin:0 auto}
 #auto-suggest .search {
 	width:322px;height:33px;margin:4px;padding:0 13px;border:1px solid #cdcdcd;
@@ -457,8 +457,7 @@ html, body {background:url(ressources/images/noise.png) left top repeat}
 }
 
 #auto-suggest .suggestions {
-	width:342px;position:relative;margin:-6px auto 0;padding:0;list-style-type:none;border:1px solid #d5d4d4;background:#fff;
-	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:13px;color:#555;	
+/* 	width:342px*/;position:relative;margin:-6px auto 0;padding:0;list-style-type:none;background:#fff;
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;
 	border-radius:2px;	

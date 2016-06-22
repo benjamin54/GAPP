@@ -6,6 +6,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.isep.metier.Users;
 
 /**
  * Servlet implementation class GroupeEleve
@@ -19,15 +22,16 @@ public class TuteurControlleur extends HttpServlet {
        
     public TuteurControlleur() {
         super();
-        // TODO Auto-generated constructor stub
+     
     }
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		Users u = (Users)session.getAttribute("UserSession");
 		
-
         if (request.getParameter("groupe") != null) {
             request.getRequestDispatcher(GROUPE).forward(request, response);
             	}

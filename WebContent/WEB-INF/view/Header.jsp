@@ -23,15 +23,17 @@
 				<li class="navbar-text"><p>${sessionScope.sessionUser.prenom}
 						${sessionScope.sessionUser.nom}</p></li>
 			</ul>
+			</div>
+			<div class="col-lg-4">
 			<form class="form-inline pull-xs-right" action="${pageContext.request.contextPath }/deconnexion" method="post">
 				<input type="submit"
 					class="btn btn-default navbar-btn navbar-right" value="Déconnexion" >
 			</form>
+			
 			</div>
 		</div>
 	</nav>
 
-	<div class="container">
 		<div class="row">
 			<form action="${pageContext.request.contextPath }/tuteur"
 				method="get">
@@ -54,6 +56,6 @@
 			</form>
 		</div>
 		`
-	</div>
+	
 </head>
 </html>
