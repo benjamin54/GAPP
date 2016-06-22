@@ -14,7 +14,7 @@
  <body>
 
   <nav class="navbar navbar-dark bg-success navbar-fixed-top"
-		style="padding-top: 20px;">
+		>
 		<div class="container">
 			<ul class="nav navbar-nav">
 				<li class="navbar-text"><p>${sessionScope.sessionUser.prenom} ${sessionScope.sessionUser.nom} </p></li>

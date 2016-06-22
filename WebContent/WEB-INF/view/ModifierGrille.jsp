@@ -11,9 +11,8 @@
 <script src="ressources/js/jquery.js"></script> 
 <body>
 <form action="ModifierGrille" method="post">
-<div class="container">
-     <h3>Fixed Navbar</h3>
-<div class="row">
+	<div class="container" style="padding-top:60px">
+		<div class="row">
   <div class="col-sm-4 col-md-4 col-lg-4">
 <%@include file="HeaderAdmin.jsp" %> </div>
 <div class="col-sm-8 col-md-8 col-lg-8">

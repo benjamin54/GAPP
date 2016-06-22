@@ -12,8 +12,7 @@
 <script src="ressources/js/jquery.js"></script>
 <script type="text/javascript" src="ressources/js/scriptrecherche.js"></script>
 <body>
-	<div class="container">
-		<h3>Fixed Navbar</h3>
+	<div class="container" style="padding-top:60px">
 		<div class="row">
 			<div class="col-sm-4 col-md-4 col-lg-4">
 				<%@include file="Header.jsp"%>

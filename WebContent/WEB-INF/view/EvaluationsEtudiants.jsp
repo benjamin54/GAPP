@@ -11,9 +11,7 @@
 <link href="/GAPP/ressources/css/lastcss.css" rel="stylesheet">
 <script src="ressources/js/jquery.js"></script>
 <body>
-
-	<div class="container">
-		<h3>Fixed Navbar</h3>
+	<div class="container" style="padding-top:60px">
 		<div class="row">
 			<div class="col-sm-4 col-md-4 col-lg-4">
 				<%@include file="HeaderEleve.jsp"%>
