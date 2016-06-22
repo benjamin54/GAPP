@@ -1,6 +1,8 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
+    	<%@ page import="java.util.*" %>
+    	<%@ page import="com.isep.metier.Users" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -19,28 +21,23 @@
 			</div>
 			<div class="col-sm-8 col-md-8 col-lg-8">
 
-				<div class="container">
-					<h3></h3>
-					<div class="row">
+		
 
 						<!-- correspond à la partie qui va changer en fonction de chaque page -->
 
 
-						<div>
+						
 
 							<!-- 							<form name="Recherche"
 								onSubmit="return Rechercher(this.mot.value);">
 								<input name="mot" type="text" size=20 onChange="n = 0;">
 								<input type="submit" value="Rechercher">
 							</form> -->
-							<ul class="nav navbar-nav">
-								<li class="nav navbar-nav"><a href="#"> Recherche
-										d'élève</a></li>
-							</ul>
+							
 
 							<form id="auto-suggest" name="Recherche"
 								class="navbar-form navbar-left" action="#" method="post">
-								<div class="form-group">
+								<div class="form-group">Recherche d'élève
 									<input class="form-control" type="text" class="search"
 										name="search" value="Rechercher"
 										onfocus="if(this.value=='Rechercher')this.value=''"
@@ -52,6 +49,12 @@
 									</button> -->
 								</div>
 							</form>
+<div class="row"></div>
+<div class="col-lg-4">Vous utilisé l'adresse mail suivante  ${sessionScoop.sessionUser.Email} <button value="submit">modifier</button></div>
+<div class="row"></div> 
+
+<div class="col-lg-4">Vous utilisé le mot de passe suivant  ${sessionScoop.sessionUser.Password} <button value="submit">modifier</button></div>
+
 
 							<!-- 							<form name="Recherche" class="navbar-form navbar-left"
 								onSubmit="return Rechercher(this.mot.value);">
@@ -69,8 +72,6 @@
 					</div>
 
 				</div>
-			</div>
-		</div>
-	</div>
+
 </body>
 </html>
