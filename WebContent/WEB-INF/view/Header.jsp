@@ -20,8 +20,8 @@
 		<div class="container">
 		<div class="col-lg-8">
 			<ul class="nav navbar-nav">
-				<li class="navbar-text"><p>${sessionScope.sessionUser.prenom}
-						${sessionScope.sessionUser.nom}</p></li>
+				<li class="navbar-text" ><p style="text-color:red"><B>${sessionScope.sessionUser.prenom}
+						${sessionScope.sessionUser.nom}</B></p></li>
 			</ul>
 			</div>
 			<div class="col-lg-4">

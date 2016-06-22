@@ -50,7 +50,7 @@
 								</div>
 							</form>
 <div class="row"></div>
-<div class="col-lg-4">Vous utilisez l'adresse mail suivante  ${sessionScope.sessionUser.Email} <button value="submit">modifier</button></div>
+<div class="col-lg-4">Vous utilisez l'adresse mail suivante  ${sessionScope.sessionUser.email} <button value="submit">modifier</button></div>
 <div class="row"></div> 
 
 
