@@ -28,20 +28,25 @@ public class AssignementsUtil {
 		U.create(ass);
 		
 	}
+	
+	/**
+	 * 
+	 * @param grp
+	 * @return
+	 */
 	public ArrayList<Assignements> AssignementByGrp(Groupes grp){
 		ArrayList AS = new ArrayList<Assignements>();
 		ArrayList AT = new ArrayList<Assignements>();
 		Session session = HibernateUtil.getSessionFactory().openSession();
+		AssignementsUtil assignementUtil = new AssignementsUtil();
 	      Transaction tx = null;
+	      int id=grp.getIdGroupes();
 	      try{
 	         tx = session.beginTransaction();
-	         AS = (ArrayList<Assignements>)session.createQuery("FROM Assignements").list(); 
+	         ArrayList<Integer> AB= (ArrayList<Integer>)session.createQuery("FROM assignements_has_groupes WHERE Groupes_idGroupes="+"'"+id+"'");
 	         tx.commit();
-	         for(int i =0; i<AS.size();i++){
-	        	 Assignements assign=(Assignements)AS.get(i);
-	        	 if(assign.getGroupeses().contains(grp)){
-	        		 AT.add(assign);
-	        	 }
+	         for(int i=0;i<AB.size();i++){
+	        	 AS.add(assignementUtil.getAssignById(i));
 	         }
 	         return AT;
 	         
@@ -72,6 +77,25 @@ public class AssignementsUtil {
 	      }
 	   
 }
+	
+	public Assignements getAssignById(int id){
+		Assignements A = new Assignements();
+		
+	      Session session = HibernateUtil.getSessionFactory().openSession();
+	      Transaction tx = null;
+	      try{
+	         tx = session.beginTransaction();
+	        A=(Assignements)session.createQuery("FROM Assignements WHERE idAssignements="+"'"+id+"'").uniqueResult();
+	        tx.commit();
+	      }catch (HibernateException e) {
+	         if (tx!=null) tx.rollback();
+	         e.printStackTrace(); 
+	      }finally {
+	         session.close(); 
+	      }
+		return A;
+	}
+	
 //	public void AssignToGroup(Assignements assign, Groupes group){
 //		Session session = HibernateUtil.getSessionFactory().openSession();
 //		Transaction tx = null;
@@ -99,6 +123,7 @@ public class AssignementsUtil {
 		catch(HibernateException e){
 			 if (tx!=null) tx.rollback();
 			 e.printStackTrace();
+			 System.out.println("Erreur fonction CreateAssignement()");
 		}
 		finally{
 		session.close();
