@@ -50,10 +50,8 @@
 								</div>
 							</form>
 <div class="row"></div>
-<div class="col-lg-4">Vous utilisé l'adresse mail suivante  ${sessionScoop.sessionUser.Email} <button value="submit">modifier</button></div>
+<div class="col-lg-4">Vous utilisez l'adresse mail suivante  ${sessionScope.sessionUser.Email} <button value="submit">modifier</button></div>
 <div class="row"></div> 
-
-<div class="col-lg-4">Vous utilisé le mot de passe suivant  ${sessionScoop.sessionUser.Password} <button value="submit">modifier</button></div>
 
 
 							<!-- 							<form name="Recherche" class="navbar-form navbar-left"
