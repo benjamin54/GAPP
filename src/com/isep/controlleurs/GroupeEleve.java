@@ -1,6 +1,8 @@
 package com.isep.controlleurs;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.isep.metier.Assignements;
+import com.isep.metier.AssignementsUtil;
 import com.isep.metier.Users;
 
 /**
@@ -41,6 +45,9 @@ public class GroupeEleve extends HttpServlet {
             request.getRequestDispatcher(GROUPE).forward(request, response);
             }
         else if (request.getParameter("accueil") != null) {
+        	AssignementsUtil ASS = new AssignementsUtil();
+        	ArrayList<Assignements> assignements=(ArrayList<Assignements>) ASS.AssignementByGrp(u.getGroupes());
+        	session.setAttribute("assignements", assignements);
             request.getRequestDispatcher(ACCUEIL).forward(request, response);
     	}
         else if (request.getParameter("monprofil") != null) {

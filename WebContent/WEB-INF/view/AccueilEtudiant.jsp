@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>    	<%@ page import="java.util.*" %>
+    	<%@ page import="com.isep.metier.Assignements" %>
 <!DOCTYPE html>
 
 <html>
@@ -25,6 +26,28 @@
 						<div class="row">
 							<section class="col-sm-8 col-md-8 col-lg-8">Bienvenue
 								sur l'espace étudiant de l'APP.</section>
+								<section>
+								<p>Assignements</p>
+									<table id="table-1">
+										<thead>
+											<tr>
+												<th>Date Limite</th>
+												<th>Description</th>
+
+											</tr>
+										</thead>
+										<tbody>
+										<%ArrayList<Assignements> list=(ArrayList<Assignements>)session.getAttribute("assignements");
+										for(int i = 0; i<list.size();i++){%>
+											<tr>
+												<td><%out.print(list.get(i).getDueTime()); %></td>
+												<td><% out.print(list.get(i).getDescription()); %></td>
+
+											</tr>
+											<% }%>
+										</tbody>
+									</table>
+								</section>
 						</div>
 					</div>
 

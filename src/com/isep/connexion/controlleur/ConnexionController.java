@@ -1,6 +1,7 @@
 package com.isep.connexion.controlleur;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.isep.connexion.model.ConnexionForm;
+import com.isep.metier.Assignements;
+import com.isep.metier.AssignementsUtil;
 import com.isep.metier.Demo;
 import com.isep.metier.Users;
 
@@ -70,6 +73,9 @@ public class ConnexionController extends HttpServlet {
 			session.setAttribute( ATT_SESSION_USER, user );
 			String rights=user.getRights();
 			if (rights.equals(".")){
+	        	AssignementsUtil ASS = new AssignementsUtil();
+	        	ArrayList<Assignements> assignements=(ArrayList<Assignements>) ASS.AssignementByGrp(user.getGroupes());
+	        	session.setAttribute("assignements", assignements);
 				this.getServletContext().getRequestDispatcher( ETUDIANT ).forward( request, response );
 			}
 			else if (rights.equals("..")) {
