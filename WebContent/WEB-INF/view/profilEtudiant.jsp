@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ page import="java.util.*" %>
+		<%@ page import="com.isep.metier.Absences" %>
+		<%@ page import="com.isep.metier.Users" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -634,12 +638,12 @@
            });
        
         
-<<<<<<< HEAD
+
         </script>
 					<div id="my-calendar"></div>
 				</section>
 
-				<section class="col-md-4">
+				<section class="col-md-2">
 					<h3>TUTEUR</h3>
 					<p>
 						nom et prénom du tuteur:<br> e-mail:<br> remarques du
@@ -647,11 +651,44 @@
 
 					</p>
 				</section>
-				<section class="col-md-2">
+				<section class="col-md-4">
 					<h3>ABSCENCES</h3>
-
+					
+						<table id="table-1" border="1">
+							<thead>
+								<tr>
+									<th > Date </th>
+									<th > Justification </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<% 
+								Users U = (Users)session.getAttribute("sessionUser");
+								Set<Absences> A=(Set<Absences>)U.getAbsenceses();
+								List<Absences> B = new ArrayList<Absences>(A);
+					for(int i=0;i<B.size();i++){%>
+									<td><%out.print(B.get(i).getDate()) ;%></td>
+									<td><%if(B.get(i).getJustification()){
+										out.println("Oui");
+									}else {out.println("non");} }%></td>
+									
+								</tr>
+							</tbody>
+						</table>
 					<p>Dates des abscences:</p>
 
+				</section>
+				<section class="col-md-2">
+				<h3>INFORMATIONS</h3>
+				<p>${sessionScope.sessionUser.email }
+				<form action="${pageContext.request.contextPath }/groupeeleve"
+				method="get">
+				<input type="text" name="newEmail">
+				<button name="modifEmail" type="submit">Modifier Email</button></p>
+				<p>${sessionScope.sessionUser.prenom} ${sessionScope.sessionUser.nom }</p>
+				<button name="modifMdp" type="submit">Modifier mot de passe</button>
+				</form>
 				</section>
 			</div>
 		</div>
