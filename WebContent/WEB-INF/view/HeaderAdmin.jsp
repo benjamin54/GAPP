@@ -13,7 +13,7 @@
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <header>
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top" style="padding-top: 20px;">
 		<div class="container">
 			<ul class="nav navbar-nav">
 				<li class="navbar-text"><p>${sessionScope.sessionUser.prenom}
