@@ -40,8 +40,7 @@
 					</div>
 					<div class="row">
 						<input class="col-lg-3" type="submit" name="admin_tuteur"
-							value="Administration
-							tuteur" id="menu">
+							value="Administration tuteur" id="menu">
 					</div>
 					<div class="row">
 						<input class="col-lg-3" type="submit" name="edit_grille"
