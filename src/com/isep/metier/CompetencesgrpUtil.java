@@ -9,7 +9,7 @@ import org.hibernate.Transaction;
 
 public class CompetencesgrpUtil {
 	
-public void deleteCompetences(Competences comp){
+public void deleteCompetencesgrp(Competencesgrp comp){
 	Session session = HibernateUtil.getSessionFactory().openSession();
     Transaction tx = null;
     try{
@@ -26,7 +26,7 @@ public void deleteCompetences(Competences comp){
  
 }
 
-public void CreateComp(Competencesgrp comp){
+public void CreateCompgrp(Competencesgrp comp){
 	Session session = HibernateUtil.getSessionFactory().openSession();
 	Transaction tx = null;
 	try{
