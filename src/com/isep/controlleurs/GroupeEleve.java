@@ -1,11 +1,18 @@
 package com.isep.controlleurs;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.isep.metier.Assignements;
+import com.isep.metier.AssignementsUtil;
+import com.isep.metier.Users;
 
 /**
  * Servlet implementation class GroupeEleve
@@ -30,11 +37,17 @@ public class GroupeEleve extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-
-        if (request.getParameter("groupe") != null) {
+	    HttpSession session = request.getSession();
+	    Users u =(Users)session.getAttribute("sessionUser");
+        if (request.getParameter("groupe") != null) {  
+        	AfficherGroupeControlleur AF = new AfficherGroupeControlleur();
+        	session.setAttribute("groupe",AF.AfficherGroupe(u));
             request.getRequestDispatcher(GROUPE).forward(request, response);
-            	}
+            }
         else if (request.getParameter("accueil") != null) {
+        	AssignementsUtil ASS = new AssignementsUtil();
+        	ArrayList<Assignements> assignements=(ArrayList<Assignements>) ASS.AssignementByGrp(u.getGroupes());
+        	session.setAttribute("assignements", assignements);
             request.getRequestDispatcher(ACCUEIL).forward(request, response);
     	}
         else if (request.getParameter("monprofil") != null) {

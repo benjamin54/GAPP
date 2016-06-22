@@ -8,17 +8,25 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.isep.metier.Users;
 
 @WebServlet("/ControleurProfiltuteur")
 public class ControleurProfiltuteur extends HttpServlet {
 
 protected void doGet(HttpServletRequest request,
         HttpServletResponse response) throws ServletException, IOException {
-
-         String monProfil = "/WEB-INF/view/ProfilTuteur.jsp";
+    String monProfil = "/WEB-INF/view/ProfilTuteur.jsp";
 
 RequestDispatcher dispatcher =  getServletContext().getRequestDispatcher(monProfil);
 dispatcher.forward(request,response);
+}
+
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
+    
 }
 	}
 
