@@ -17,15 +17,21 @@
     <servlet-name>GroupeEleve</servlet-name>
     <servlet-class>com.isep.controlleurs.GroupeEleve</servlet-class>
   </servlet>
-
   <servlet>
     <servlet-name>AdminControlleur</servlet-name>
     <servlet-class>com.isep.controlleurs.AdminControlleur</servlet-class>
   </servlet>
-
   <servlet-mapping>
     <servlet-name>AdminControlleur</servlet-name>
     <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>ModifGrilleControlleur</servlet-name>
+    <servlet-class>com.isep.controlleurs.ModifGrilleControlleur</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModifGrilleControlleur</servlet-name>
+    <url-pattern>/modif_grille</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>GroupeEleve</servlet-name>

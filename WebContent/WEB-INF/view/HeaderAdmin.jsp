@@ -47,13 +47,6 @@
 							value="Grille de compétences" id="menu">
 					</div>
 				</form>
-				<!-- 				<ul class="nav nav-pills nav-stacked bordered">
-
-					<li><a href="AdministrationEleve.jsp">Administration élève</a></li>
-					<li><a href="AdministrationTuteur.jsp">Administration
-							tuteur</a></li>
-					<li><a href="ModifierGrille.jsp">Grille de compétences</a></li>
-				</ul> -->
 			</div>
 		</div>
 	</div>
