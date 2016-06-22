@@ -32,16 +32,29 @@
 		<h3></h3>
 		<div class="row">
 			<div class="col-md-3">
-				<ul class="nav nav-pills nav-stacked bordered">
+				<form action="${pageContext.request.contextPath }/admin"
+					method="get">
+					<div class="row">
+						<input class="col-lg-3" type="submit" name="admin_eleve"
+							value="Administration élève" id="menu">
+					</div>
+					<div class="row">
+						<input class="col-lg-3" type="submit" name="admin_tuteur"
+							value="Administration
+							tuteur" id="menu">
+					</div>
+					<div class="row">
+						<input class="col-lg-3" type="submit" name="edit_grille"
+							value="Grille de compétences" id="menu">
+					</div>
+				</form>
+				<!-- 				<ul class="nav nav-pills nav-stacked bordered">
 
 					<li><a href="AdministrationEleve.jsp">Administration élève</a></li>
 					<li><a href="AdministrationTuteur.jsp">Administration
 							tuteur</a></li>
 					<li><a href="ModifierGrille.jsp">Grille de compétences</a></li>
-
-
-
-				</ul>
+				</ul> -->
 			</div>
 		</div>
 	</div>

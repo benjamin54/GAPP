@@ -1,41 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
   <display-name>GAPP</display-name>
-
   <servlet>
     <servlet-name>ConnexionController</servlet-name>
     <servlet-class>com.isep.connexion.controlleur.ConnexionController</servlet-class>
   </servlet>
-  
   <servlet>
     <servlet-name>Deconnexion</servlet-name>
     <servlet-class>com.isep.connexion.controlleur.Deconnexion</servlet-class>
   </servlet>
-  
   <servlet>
     <servlet-name>user</servlet-name>
     <servlet-class>com.isepweb.controleur.ControleurProfilEtudiant</servlet-class>
   </servlet>
-<!--   <servlet> -->
-<!--     <servlet-name>Tuteur</servlet-name> -->
-<!--     <servlet-class>com.isepweb.controleur.ControleurProfiltuteur</servlet-class> -->
-<!--   </servlet> -->
   <servlet>
     <servlet-name>GroupeEleve</servlet-name>
     <servlet-class>com.isep.controlleurs.GroupeEleve</servlet-class>
   </servlet>
-  
-   <servlet>
-    <servlet-name>GroupeEleve</servlet-name>
-    <servlet-class>com.isep.controlleurs.GroupeEleve</servlet-class>
+
+  <servlet>
+    <servlet-name>AdminControlleur</servlet-name>
+    <servlet-class>com.isep.controlleurs.AdminControlleur</servlet-class>
   </servlet>
-  
+
+  <servlet-mapping>
+    <servlet-name>AdminControlleur</servlet-name>
+    <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>GroupeEleve</servlet-name>
     <url-pattern>/groupeeleve</url-pattern>
   </servlet-mapping>
-  
-   <servlet>
+  <servlet>
     <servlet-name>TuteurControlleur</servlet-name>
     <servlet-class>com.isep.controlleurs.TuteurControlleur</servlet-class>
   </servlet>
@@ -43,7 +39,6 @@
     <servlet-name>TuteurControlleur</servlet-name>
     <url-pattern>/tuteur</url-pattern>
   </servlet-mapping>
- 
   <servlet-mapping>
     <servlet-name>ConnexionController</servlet-name>
     <url-pattern>/connexion</url-pattern>
@@ -56,12 +51,7 @@
     <servlet-name>user</servlet-name>
     <url-pattern>*.php</url-pattern>
   </servlet-mapping>
-<!--   <servlet-mapping> -->
-<!--     <servlet-name>Tuteur</servlet-name> -->
-<!--     <url-pattern>/ProfilTuteur</url-pattern> -->
-<!--   </servlet-mapping> -->
-    
- <welcome-file-list> 
-<welcome-file>index.jsp</welcome-file>
-</welcome-file-list>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>
