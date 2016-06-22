@@ -26,8 +26,8 @@
 						<div class="row">
 							<section class="col-sm-8 col-md-8 col-lg-8">Bienvenue
 								sur l'espace étudiant de l'APP.</section>
-								<section>
-								<p>Assignements</p>
+								<section class="col-sm-6">
+								<p><br/>RENDUS</p>
 									<table id="table-1">
 										<thead>
 											<tr>

@@ -1,5 +1,7 @@
 package com.isep.metier;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
@@ -35,7 +37,7 @@ public class AssignementsUtil {
 	 * @return
 	 */
 	public ArrayList<Assignements> AssignementByGrp(Groupes grp){
-		ArrayList AS = new ArrayList<Assignements>();
+		ArrayList AS = new ArrayList<Integer>();
 		ArrayList AT = new ArrayList<Assignements>();
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		AssignementsUtil assignementUtil = new AssignementsUtil();
@@ -43,16 +45,23 @@ public class AssignementsUtil {
 	      int id=grp.getIdGroupes();
 	      try{
 	         tx = session.beginTransaction();
-	         ArrayList<Integer> AB= (ArrayList<Integer>)session.createQuery("FROM assignements_has_groupes WHERE Groupes_idGroupes="+"'"+id+"'");
-	         tx.commit();
-	         for(int i=0;i<AB.size();i++){
-	        	 AS.add(assignementUtil.getAssignById(i));
-	         }
-	         return AT;
+	         ArrayList<Assignements> AB= (ArrayList<Assignements>)session.createQuery("FROM Assignements a WHERE :myGroupe in elements(a.groupeses)").setString("myGroupe", String.valueOf(id)).list();
+//	         tx.commit();
+//	         int x=0;
+//	         for(int y = 0; y<AB.size();y++){
+//	        	 	
+//	        	 AS.add(AB.get(x));
+//	        	 x++;
+//	         }
+//	         for(int i=0;i<AS.size();i++){
+//
+//	        			 Assignements listAss = (Assignements)assignementUtil.getAssignById((int)AS.get(i));
+//	         }
+	         return AB;
 	         
-	      }catch (HibernateException e) {
+	      }catch (HibernateException g) {
 	         if (tx!=null) tx.rollback();
-	         e.printStackTrace(); 
+	         g.printStackTrace(); 
 	         return AT;
 	      }finally {
 	         session.close(); 
