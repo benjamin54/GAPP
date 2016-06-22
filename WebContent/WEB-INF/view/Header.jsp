@@ -14,9 +14,9 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="ressources/js/jquery.js"></script>
 <script type="text/javascript" src="coucou.js"></script>
-<body>
+<body >
 	
-	<nav class="navbar navbar-dark bg-success navbar-fixed-top">
+	<nav class="navbar navbar-dark bg-success navbar-fixed-top" id="background" >
 		<div class="container">
 		<div class="col-lg-8">
 			<ul class="nav navbar-nav">
